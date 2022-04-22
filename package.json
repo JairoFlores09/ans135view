@@ -1,0 +1,15 @@
+{
+  "name": "analisisnumerico",
+  "version": "1.0.0",
+  "description": "Métodos numéricos",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Jairo Flores",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.4.1"
+  }
+}
