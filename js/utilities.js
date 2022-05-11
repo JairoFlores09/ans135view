@@ -1,7 +1,6 @@
 'use strict';
 
 const URL = "https://ans135proyect.herokuapp.com/ans/";
-//const URL = "http://127.0.0.1:8000/ans/";
 const formContainer = document.querySelector('.form-container');
 const requestContainer = document.querySelector('.request-containter');
 const ggb_element = document.querySelector('#ggb-element');
@@ -188,6 +187,8 @@ export const requestData = function(element){
 							<div">
 								<label for="poly" class="label">Polinomio: </label>
 								<input type="text" name="poly" id="poly" class="input" placeholder="x^2 - 5*x + 4"/>
+								<label for="interpolar" class="label">Interpolar: </label>
+								<input type="text" name="interpolar" id="interpolar" class="input"/>
 								<label for="makeTable" class="label">Ingresar los datos en una Tabla </label>
 								<input type="checkbox" name="makeTable" id="makeTable"/>
 							</div>							
@@ -265,13 +266,31 @@ export const requestData = function(element){
 				let yvalues = [];
 				let ixvalues = document.querySelectorAll(".axis");
 				let iyvalues = document.querySelectorAll(".epsilon");
+				let interpolar = document.querySelector("#interpolar");
 				ixvalues.forEach(ixvalue => xvalues.push(ixvalue.value));
 				if (iyvalues){
 					iyvalues.forEach(iyvalue => yvalues.push(iyvalue.value));
 				}
-				console.log(polinomyal);
-				console.log(xvalues);
-				console.log(yvalues);
+				let result = get_data(`${URL}unidad${id}/${name.toLowerCase()}/`,
+						{
+							'polinomio': polinomyal,
+							'interpolar': cifras.value,
+							'xi': xvalues,
+							'fi': yvalues,
+						}).
+					then(response => response.json())
+					.then(data => {
+						if(data['error']){
+							Swal.fire({
+  							icon: 'error',
+  							title: 'Oops...',
+  							text: data['error'],
+							});
+						}else{
+							generate_table(data);
+						}			
+					});
+				
 			});
 			break;
 	}

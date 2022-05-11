@@ -1,4 +1,4 @@
-4270
+4274
 94C:\Users\JairoFlores\Documents\ans135view\node_modules\electron-to-chromium\full-versions.json132963479690508679 0
 65C:\Users\JairoFlores\Documents\ans135view\dist\index.0f04db12.css132965732961365174 0
 106C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mdb_drop.c132963479762979905 0
@@ -60,7 +60,7 @@
 45C:\Users\JairoFlores\Documents\ans135view\css132963479295176517 1
 91C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\package-manager\package.json132963479774239591 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.f8905ca5.js132966986018909071 0
-46C:\Users\JairoFlores\Documents\ans135view\dist132967007753975948 1
+46C:\Users\JairoFlores\Documents\ans135view\dist132967729333819788 1
 111C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\utils\test\input\sourcemap\referenced-min.js.map132963479801447169 0
 69C:\Users\JairoFlores\Documents\ans135view\dist\index.abb61ef8.css.map132965754406464605 0
 93C:\Users\JairoFlores\Documents\ans135view\node_modules\source-map\lib\source-map-generator.js132963479674215321 0
@@ -1814,7 +1814,7 @@
 74C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\src\writer.cpp132963479799023090 0
 91C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\dependencies\lz4\lib\lz4frame.c132963479761046729 0
 131C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-module-fallback132963479801357539 1
-57C:\Users\JairoFlores\Documents\ans135view\dist\index.html132967007753766697 0
+57C:\Users\JairoFlores\Documents\ans135view\dist\index.html132967729333584005 0
 106C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mdb_dump.c132963479764343367 0
 90C:\Users\JairoFlores\Documents\ans135view\node_modules\caniuse-lite\data\regions\alt-sa.js132963479759986592 0
 80C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\prebuilds\darwin-x64132963479880959342 1
@@ -1899,7 +1899,7 @@
 84C:\Users\JairoFlores\Documents\ans135view\node_modules\chrome-trace-event\CHANGES.md132963479678329423 0
 114C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\dependencies\lz4\lib\dll\example\fullbench-dll.vcxproj132963479903719128 0
 106C:\Users\JairoFlores\Documents\ans135view\node_modules\caniuse-lite\data\features\link-rel-dns-prefetch.js132963479841501879 0
-57C:\Users\JairoFlores\Documents\ans135view\js\utilities.js132967007684684717 0
+57C:\Users\JairoFlores\Documents\ans135view\js\utilities.js132967728823593904 0
 88C:\Users\JairoFlores\Documents\ans135view\node_modules\htmlnano\lib\modules\minifySvg.js132963479714847523 0
 111C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\LICENSE132963479677860613 0
 69C:\Users\JairoFlores\Documents\ans135view\node_modules\dotenv\LICENSE132963479662029120 0
@@ -4052,6 +4052,7 @@
 91C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\codeframe\test\fixtures\a.js132963479750808003 0
 89C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\core\src\serializerCore.js132963479817774105 0
 98C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\core\src\TargetDescriptor.schema.js132963479817930571 0
+64C:\Users\JairoFlores\Documents\ans135view\dist\index.479b9b55.js132967729333584005 0
 80C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\core\src\utils.js132963479823685038 0
 102C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\core\src\requests\BundleGraphRequest.js132963479775398280 0
 96C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\core\src\requests\EntryRequest.js132963479784879773 0
@@ -4173,13 +4174,14 @@
 65C:\Users\JairoFlores\Documents\ans135view\dist\index.3e19d485.css132965762241547357 0
 69C:\Users\JairoFlores\Documents\ans135view\dist\index.3e19d485.css.map132965762241717382 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.44cea096.js132965683106130793 0
+68C:\Users\JairoFlores\Documents\ans135view\dist\index.479b9b55.js.map132967729333708767 0
 69C:\Users\JairoFlores\Documents\ans135view\dist\index.47f423d5.css.map132965706813469003 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.4bbb440c.js132967005898923294 0
 68C:\Users\JairoFlores\Documents\ans135view\dist\index.4bbb440c.js.map132967005898967707 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.4bc47997.js132966998732573544 0
 68C:\Users\JairoFlores\Documents\ans135view\dist\index.4bc47997.js.map132966998732606943 0
-64C:\Users\JairoFlores\Documents\ans135view\dist\index.4de9b498.js132967007687786694 0
-68C:\Users\JairoFlores\Documents\ans135view\dist\index.4de9b498.js.map132967007687848689 0
+64C:\Users\JairoFlores\Documents\ans135view\dist\index.4de9b498.js132967728825427880 0
+68C:\Users\JairoFlores\Documents\ans135view\dist\index.4de9b498.js.map132967728825591064 0
 68C:\Users\JairoFlores\Documents\ans135view\dist\index.5cc626e1.js.map132967001992181386 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.5d110459.js132965690048499503 0
 68C:\Users\JairoFlores\Documents\ans135view\dist\index.5d110459.js.map132965690048705699 0
@@ -4227,6 +4229,8 @@
 69C:\Users\JairoFlores\Documents\ans135view\dist\index.b3375583.css.map132965754903064501 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.b66c9d1a.js132963577405044082 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.b83cac5b.js132965700640633427 0
+64C:\Users\JairoFlores\Documents\ans135view\dist\index.bed05b6a.js132967725442335517 0
+68C:\Users\JairoFlores\Documents\ans135view\dist\index.bed05b6a.js.map132967725442496581 0
 69C:\Users\JairoFlores\Documents\ans135view\dist\index.c0193df5.css.map132965690048547135 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.c360b5e5.js132965810982852978 0
 68C:\Users\JairoFlores\Documents\ans135view\dist\index.c490ffb5.js.map132965817281663511 0
