@@ -153,11 +153,15 @@ export const requestData = function(element){
 					e.preventDefault();
 					let params = [];
 					allParams.forEach(param => params.push(param.value));
+					if (name.toLowerCase() !== 'bairstow'){
+						//El metodo de bairstow no requiere que los parametros viajen ordenados
+						params = params.sort(function(a,b){return a - b});
+					}
 					let result = get_data(`${URL}unidad${id}/${name.toLowerCase()}/`,
 						{
 							'funcion': funct.value,
 							'cifras': cifras.value,
-							'params': params.sort(function(a,b){return a - b})
+							'params': params
 						}).
 					then(response => response.json())
 					.then(data => {
