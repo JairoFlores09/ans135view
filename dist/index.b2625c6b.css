@@ -282,6 +282,57 @@ main {
   padding: 3rem 1.5rem;
 }
 
+#poly {
+  width: 20rem;
+  margin-right: 3rem;
+}
+
+.polynomial-table {
+  margin: 3.5rem auto 0;
+}
+
+.polynomial-table, .ptr, .ptc {
+  border: 1px solid var(--bg-brown-extra-dark);
+  border-collapse: collapse;
+}
+
+.init {
+  color: #fff;
+  background-color: var(--bg-brown-dark);
+  padding: 0 1rem;
+}
+
+.ptc input {
+  width: 5rem;
+  height: 3.5rem;
+  text-align: center;
+  background-color: #0000;
+  border: none;
+  padding: .2rem;
+  font-size: 1.8rem;
+}
+
+.ptc input:focus {
+  outline: none;
+}
+
+.add-col {
+  color: #fff;
+  width: 2.5rem;
+  height: 4rem;
+  background-color: green;
+  border: none;
+  transition: all .2s;
+}
+
+.add-col:hover {
+  background-color: #006400;
+}
+
+.fontvar {
+  font-size: 1.6rem !important;
+}
+
 @keyframes shake {
   0% {
     transform: scale(1);

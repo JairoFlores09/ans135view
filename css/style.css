@@ -293,6 +293,60 @@ main{
 	padding: 3rem 1.5rem;
 	border-bottom: 1px solid var(--bg-brown-extra-dark);
 }
+/* Estilos para los elementos de la unidad 3 */
+#poly{
+	width: 20rem;
+	margin-right: 3rem;
+}
+
+.polynomial-table{
+	margin: 3.5rem auto 0 auto;
+}
+
+.polynomial-table,
+.ptr,
+.ptc{
+	border: 1px solid var(--bg-brown-extra-dark);
+	border-collapse: collapse;
+}
+
+.init{
+	color: white;
+	background-color: var(--bg-brown-dark);
+	padding: 0 1rem 0 1rem;
+}
+
+.ptc input{
+	width: 5rem;
+	height: 3.5rem;
+	background-color: transparent;
+	border: none;
+	/*border-bottom: 1px solid var(--bg-brown-extra-dark);*/
+	padding: 0.2rem;
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+.ptc input:focus{
+	outline: none;
+}
+
+.add-col{
+	border: none;
+	background-color: green;
+	color: white;
+	width: 2.5rem;
+	height: 4rem;
+	transition: all 0.2s ease;
+}
+
+.add-col:hover{
+	background-color: darkgreen;
+}
+
+.fontvar{
+	font-size: 1.6rem !important;
+}
 
 
 @keyframes shake{

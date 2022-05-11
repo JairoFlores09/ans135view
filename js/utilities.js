@@ -65,11 +65,13 @@ export const requestData = function(element){
 	}
 	let id = element.parentElement.dataset.id;
 	let name = element.dataset.name;
+	let description = element.textContent;
+	let html;
 	switch(id){
 		//================= UNIDAD 1 ====================
 		case '1':
 			let interval = element.dataset.interval;
-			const html =`
+			html =`
 				<form id='unit1-form' method='POST'>
 					<div class='method'>
 						<div>
@@ -113,8 +115,7 @@ export const requestData = function(element){
 			else{
 				ggb_element.classList.add("hidden");
 				let nparams = Number(element.dataset.params);
-				let description = element.textContent;
-				const html = `
+				html = `
 					<form id='unit2-form' method='POST'>
 						<div class='method'>
 							<span class="label">${description}</span>
@@ -172,6 +173,102 @@ export const requestData = function(element){
 					});
 				});
 			}
+			break;
+		case '3':
+			//========================= UNIDAD 3 ==============================
+			html = `
+				<form id='unit3-form' method='POST'>
+					<div class='method fontvar'>
+						<span class='label'>${description}</span>
+						<div style="margin-top: 2rem;">
+							<div">
+								<label for="poly" class="label">Polinomio: </label>
+								<input type="text" name="poly" id="poly" class="input" placeholder="x^2 - 5*x + 4"/>
+								<label for="makeTable" class="label">Ingresar los datos en una Tabla </label>
+								<input type="checkbox" name="makeTable" id="makeTable"/>
+							</div>							
+							<table class="polynomial-table">
+								<tbody class="body-table">
+									<tr class="ptr">
+										<td class="ptc init">x</td>
+										<td class="ptc"><input type="text" class="axis"/></td>
+										<td class="ptc"><input type="text" class="axis"/></td>
+										<td class="ptc"><input type="text" class="axis"/></td>
+										<td class="ptc"><button type="button" class="add-col"><i class="fa-solid fa-plus"></i></button></td>
+									</tr>
+								</tbody>
+							</table>
+							
+						</div>
+					</div>
+				</form>
+			`;
+			formContainer.insertAdjacentHTML('afterbegin', html);
+			let tableBody = document.querySelector(".body-table");
+			let btnAdd = document.querySelector(".add-col");
+			let elem = `<td class="ptc"><input type="text" class="axis"/></td>`;
+			btnAdd.addEventListener('click', function(){
+				this.parentElement.insertAdjacentHTML('beforebegin', elem);
+				if((tableBody.childNodes.length - 2) > 1){
+					let elem2 = `<td class="ptc"><input type="text" class="epsilon"/></td>`;
+					tableBody.lastChild.insertAdjacentHTML('beforeend', elem2);
+				}
+			});
+			// funcionalidad para el checkbox
+			let check = document.querySelector("#makeTable");
+			check.addEventListener('change', function(){
+				if(this.checked){
+					document.querySelector("#poly").value = "";
+					// Si el usuario ha seleccionado introducir los datos por medio de una tabla
+					document.querySelector("#poly").disabled = true;
+					let ncolumns = (document.querySelector(".ptr").childNodes.length)-8;
+					//se crea la fila
+					let row = document.createElement('tr');
+					row.setAttribute("class","ptr");
+					// se crea el identificador de la fila
+					let init = document.createElement("td");
+					init.setAttribute("class","ptc init");
+					init.textContent = "y";
+					row.appendChild(init);
+					for(let i = 0; i < ncolumns; i++){
+						let td = document.createElement('td');
+						td.setAttribute('class','ptc');
+						let input = document.createElement('input');
+						//se agregan los atributos para el input
+						input.setAttribute('type','text');
+						input.setAttribute('class','epsilon');
+						td.appendChild(input);
+						row.appendChild(td);
+					}
+					tableBody.appendChild(row);
+				}
+				else{
+					// Si el usuario va a ingresar la funcion polinomica
+					document.querySelector("#poly").disabled = false;
+					let child = tableBody.lastChild;
+					tableBody.removeChild(child);
+				}
+			});
+			//creacion del boton de enviar
+			let button = `<button type='submit' id='btn_unit3' class='btn btn-submit'><i class="fa-solid fa-check"></i></button>`;
+			document.querySelector(".method").insertAdjacentHTML('beforeend', button);
+			//envio de la informacion al servidor y procesamiento de la respuesta
+			//Accion para el boton de enviar
+			document.querySelector("#btn_unit3").addEventListener('click', (e)=>{
+				e.preventDefault();
+				let polinomyal = document.querySelector('#poly')?.value;
+				let xvalues = [];
+				let yvalues = [];
+				let ixvalues = document.querySelectorAll(".axis");
+				let iyvalues = document.querySelectorAll(".epsilon");
+				ixvalues.forEach(ixvalue => xvalues.push(ixvalue.value));
+				if (iyvalues){
+					iyvalues.forEach(iyvalue => yvalues.push(iyvalue.value));
+				}
+				console.log(polinomyal);
+				console.log(xvalues);
+				console.log(yvalues);
+			});
 			break;
 	}
 }
