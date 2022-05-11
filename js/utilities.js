@@ -1,7 +1,7 @@
 'use strict';
 
-//const URL = "https://ans135proyect.herokuapp.com/ans/";
-const URL = "http://127.0.0.1:8000/ans/";
+const URL = "https://ans135proyect.herokuapp.com/ans/";
+//const URL = "http://127.0.0.1:8000/ans/";
 const formContainer = document.querySelector('.form-container');
 const requestContainer = document.querySelector('.request-containter');
 const ggb_element = document.querySelector('#ggb-element');
