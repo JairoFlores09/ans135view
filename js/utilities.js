@@ -266,31 +266,30 @@ export const requestData = function(element){
 				let yvalues = [];
 				let ixvalues = document.querySelectorAll(".axis");
 				let iyvalues = document.querySelectorAll(".epsilon");
-				let interpolar = document.querySelector("#interpolar");
+				let interpolar = document.querySelector("#interpolar").value;
 				ixvalues.forEach(ixvalue => xvalues.push(ixvalue.value));
 				if (iyvalues){
 					iyvalues.forEach(iyvalue => yvalues.push(iyvalue.value));
 				}
-				let result = get_data(`${URL}unidad${id}/${name.toLowerCase()}/`,
-						{
-							'polinomio': polinomyal,
-							'interpolar': cifras.value,
-							'xi': xvalues,
-							'fi': yvalues,
-						}).
-					then(response => response.json())
-					.then(data => {
-						if(data['error']){
-							Swal.fire({
-  							icon: 'error',
-  							title: 'Oops...',
-  							text: data['error'],
-							});
-						}else{
-							generate_table(data);
-						}			
-					});
-				
+				let result = get_data(`${URL}unidad${id}/${name.toLowerCase()}/`, {
+					'polinomio': polinomyal,
+					'interpolar': interpolar,
+					'xi': xvalues,
+					'fi': yvalues,
+				})
+				.then(response => response.json())
+				.then(data => {
+					if(data['error']){
+						Swal.fire({
+						  icon: 'error',
+						  title: 'Oops...',
+						  text: data['error'],
+						});
+					}else{
+						console.log(data);
+						generate_table(data);
+					}
+				});
 			});
 			break;
 	}
