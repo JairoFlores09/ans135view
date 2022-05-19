@@ -689,7 +689,7 @@ const requestData = function(element) {
 				<form id='unit1-form' method='POST'>
 					<div class='method'>
 						<div>
-							<span>${name}(${name == 'Ln' ? '1 +' : ''}<input type='number' step='0.01' name='x' id='x' class='input__method' require='true'/>)
+							<span>${name == 'fraccion' ? '1 / 1 -' : name}(${name == 'Ln' ? '1 +' : ''}<input type='number' step='0.01' name='x' id='x' class='input__method' require='true'/>)
 							&nbsp; ${interval ? interval : ''}</span>
 							<span>Cifras significativas: <input type='number' name='cifras' id='cifras' class='input__method' require='true'/></span>
 						</div>
