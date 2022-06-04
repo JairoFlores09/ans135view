@@ -44,6 +44,10 @@ ul{
 	list-style: none;
 }
 
+.swal2-popup{
+	font-size: 2.8rem;
+}
+
 .hidden{
 	visibility: hidden;
 	display: none;
@@ -346,6 +350,57 @@ main{
 
 .fontvar{
 	font-size: 1.6rem !important;
+}
+
+/* Estilos para los elementos de la unidad 4 */
+
+.options{
+	display: flex;
+	margin-top: 3rem;
+}
+
+.select-group{
+	display: flex;
+	align-items: center;
+	margin-right: 3.5rem;
+
+}
+
+.select-menu{
+	background-color: var(--bg-brown-dark);
+	color: white;
+	border: none;
+	height: 2.5rem;
+	width: 18rem;
+	position: absolute;
+	top: 0;
+}
+
+.select-menu:focus{outline: none;}
+
+.select-box{
+	display: inline-block;
+	border: 1px solid var(--bg-brown-dark);
+	height: 2.5rem;
+	width: 16rem;
+	overflow: hidden;
+	position: relative;
+	margin-left: 1rem;
+}
+
+.select-box::after{
+	content: '\025be';
+	display: block;
+	margin-top: -0.7rem;
+	text-align: center;
+	color: white;
+	background-color: green;
+	width: 2.5rem;
+	height: 3.2rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+	pointer-events: none;
 }
 
 

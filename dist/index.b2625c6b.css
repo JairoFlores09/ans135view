@@ -42,6 +42,10 @@ ul {
   list-style: none;
 }
 
+.swal2-popup {
+  font-size: 2.8rem;
+}
+
 .hidden {
   visibility: hidden;
   transition: all 1s ease-in;
@@ -331,6 +335,56 @@ main {
 
 .fontvar {
   font-size: 1.6rem !important;
+}
+
+.options {
+  margin-top: 3rem;
+  display: flex;
+}
+
+.select-group {
+  align-items: center;
+  margin-right: 3.5rem;
+  display: flex;
+}
+
+.select-menu {
+  background-color: var(--bg-brown-dark);
+  color: #fff;
+  height: 2.5rem;
+  width: 18rem;
+  border: none;
+  position: absolute;
+  top: 0;
+}
+
+.select-menu:focus {
+  outline: none;
+}
+
+.select-box {
+  border: 1px solid var(--bg-brown-dark);
+  height: 2.5rem;
+  width: 16rem;
+  margin-left: 1rem;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.select-box:after {
+  content: "▾";
+  text-align: center;
+  color: #fff;
+  width: 2.5rem;
+  height: 3.2rem;
+  pointer-events: none;
+  background-color: green;
+  margin-top: -.7rem;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 @keyframes shake {

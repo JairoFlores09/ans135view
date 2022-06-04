@@ -623,7 +623,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "requestData", ()=>requestData
 );
 'use strict';
-const URL = "https://ans135proyect.herokuapp.com/ans/";
+const URL = 'https://ans135proyect.herokuapp.com/ans/';
 const formContainer = document.querySelector('.form-container');
 const requestContainer = document.querySelector('.request-containter');
 const ggb_element = document.querySelector('#ggb-element');
@@ -689,7 +689,7 @@ const requestData = function(element) {
 				<form id='unit1-form' method='POST'>
 					<div class='method'>
 						<div>
-							<span>${name == 'fraccion' ? '1 / 1 -' : name}(${name == 'Ln' ? '1 +' : ''}<input type='number' step='0.01' name='x' id='x' class='input__method' require='true'/>)
+							<span>${name == 'fraccion' ? "1 / 1 - " : name}(${name == 'Ln' ? '1 +' : ''}<input type='number' step='0.01' name='x' id='x' class='input__method' require='true'/>)
 							&nbsp; ${interval ? interval : ''}</span>
 							<span>Cifras significativas: <input type='number' name='cifras' id='cifras' class='input__method' require='true'/></span>
 						</div>
@@ -791,7 +791,7 @@ const requestData = function(element) {
 					<div class='method fontvar'>
 						<span class='label'>${description}</span>
 						<div style="margin-top: 2rem;">
-							<div">
+							<div>
 								<label for="poly" class="label">Polinomio: </label>
 								<input type="text" name="poly" id="poly" class="input" placeholder="x^2 - 5*x + 4"/>
 								<label for="interpolar" class="label">Interpolar: </label>
@@ -896,8 +896,229 @@ const requestData = function(element) {
                 });
             });
             break;
-    }
-};
+        //========================= UNIDAD 4 ==============================
+        case '4':
+            if (name) html = `
+					<form id='unit4-form' method='POST'>
+						<div class='method fontvar'>
+							<span class='label'>${description}</span>
+							<div style='margin-top: 2rem;'>
+								<div>
+									<label for='function' class='label'>Función: </label>
+									<input type="text" name="function" id="function" class="input" placeholder="cos(x)"/>
+									${name == 'Derivacion' || name == 'Richardson' ? "<label for='spc' class='label'>h: </label>" : ""}
+									${name == 'Derivacion' || name == 'Richardson' ? "<input type='text' name='spc' id='spc' class='input'/>" : ""}
+									${name == 'Derivacion' || name == 'Richardson' ? "<label for='value' class='label'>Valor: </label>" : ""}
+									${name == 'Derivacion' || name == 'Richardson' ? "<input type='text' name='value' id='value' class='input'/>" : ""}
+									${name == "Integracion" || name == "Rosemberg" ? "<label for='a' class='label'>a: </label>" : ""}
+									${name == "Integracion" || name == "Rosemberg" ? "<input type='text' name='a' id='a' class='input'>" : ""}
+									${name == "Integracion" || name == "Rosemberg" ? "<label for='b' class='label'>b: </label>" : ""}
+									${name == "Integracion" || name == "Rosemberg" ? "<input type='text' name='b' id='b' class='input'>" : ""}
+									${name == 'Richardson' || name == 'Rosemberg' ? '' : '<label for="makeTable" class="label">Ingresar los datos en una Tabla </label>'}
+									${name == 'Richardson' || name == 'Rosemberg' ? '' : '<input type="checkbox" name="makeTable" id="makeTable"/>'}
+								</div>
+								<table class="polynomial-table hidden">
+									<tbody class="body-table">
+										<tr class="ptr">
+											<td class="ptc init">x</td>
+											<td class="ptc"><input type="text" class="axis"/></td>
+											<td class="ptc"><input type="text" class="axis"/></td>
+											<td class="ptc"><input type="text" class="axis"/></td>
+											<td class="ptc"><button type="button" class="add-col"><i class="fa-solid fa-plus"></i></button></td>
+										</tr>
+										<tr class='ptr'>
+										<td class="ptc init">y</td>
+											<td class="ptc"><input type="text" class="epsilon"/></td>
+											<td class="ptc"><input type="text" class="epsilon"/></td>
+											<td class="ptc"><input type="text" class="epsilon"/></td>
+										</tr>
+									</tbody>
+								</table>
+								<div class='options'>
+									<div class='select-group' style="display: ${name == "Derivacion" || name == "Richardson" ? 'block' : 'none'}">
+										<label for='order' class='label'>Orden: </label>
+										<div class='select-box'>
+											<select name='order' id='order' class='select-menu'>
+												<option value='1'>Primer Derivada</option>
+												<option value='2'>Segunda Derivada</option>
+												<option value='3'>Tercer Derivada</option>
+												<option value='4'>Cuarta Derivada</option>
+											</select>
+										</div>
+									</div>
+									<div class='select-group' style="display: ${name == "Derivacion" || name == "Richardson" ? 'block' : 'none'}">
+										<label for='metodo' class='label'>Método: </label>
+										<div class='select-box'>
+											<select name='metodo' id='metodo' class='select-menu'>
+												<option value='1'>Hacia adelante</option>
+												<option value='2'>Hacia atrás</option>
+												<option value='3'>Centrada</option>
+												<option value='4'>Tres puntos</option>
+												<option value='5'>Cinco puntos</option>
+											</select>
+										</div>
+									</div>
+									<div class='select-group' style="display: ${name == "Integracion" || name == "Rosemberg" ? 'block' : 'none'}">
+										<label for='metodo' class='label'>Método: </label>
+										<div class='select-box'>
+											<select name='metodo' id='metodo' class='select-menu'>
+												<option value='1'>Trapecio Compuesto</option>
+												<option value='2'>Simpson 1/3</option>
+												<option value='3'>Simpson 3/8</option>
+											</select>
+										</div>
+									</div>
+									<div class='select-group' style="display: ${name == "Derivacion" || name == "Richardson" ? 'block' : 'none'}">
+										<label for='mode' class='label'>Modo: </label>
+										<div class='select-box'>
+											<select name='mode' id='mode' class='select-menu'>
+												<option value='1'>Primer diferencia</option>
+												<option value='2'>Segunda diferencia</option>
+											</select>
+										</div>
+									</div>
+									<div>
+										${name == 'Richardson' || name == "Rosemberg" ? "<label for='level' class='label'>Nivel: </label>" : ''}
+										${name == 'Richardson' || name == "Rosemberg" ? "<input type='text' name='level' id='level' class='input' placeholder='2'>" : ''}
+										${name == 'Integracion' ? "<label for='invervals' class='label'>Subintervalos: </label>" : ""}
+										${name == 'Integracion' ? "<input type='text' name='intervals' id='intervals' class='input' placeholder='1'>" : ""}
+									</div>
+								</div>
+							</div>
+							<button type='submit' id='btn_unit4' class='btn btn-submit'><i class="fa-solid fa-check"></i></button>
+						</div>
+					</form>
+				`;
+            formContainer.insertAdjacentHTML('afterbegin', html);
+            //Evento de tablas, solo es valida para la derivacion y la integracion
+            if (name == "Derivacion" || name == "Integracion") {
+                let check2 = document.querySelector('#makeTable');
+                let table = document.querySelector('.polynomial-table');
+                let funcion = document.querySelector('#function');
+                let spc = document.querySelector('#spc');
+                check2.addEventListener('change', function() {
+                    if (this.checked) {
+                        table.classList.remove('hidden');
+                        funcion.value = '';
+                        funcion.disabled = true;
+                        if (name == "Derivacion") {
+                            spc.value = '';
+                            spc.disabled = true;
+                        }
+                    } else {
+                        table.classList.add('hidden');
+                        funcion.disabled = false;
+                        if (name == "Derivacion") spc.disabled = false;
+                    }
+                });
+                //agrega mas datos a la tabla
+                let tableBody2 = document.querySelector('.body-table');
+                let btnAdd2 = document.querySelector(".add-col");
+                let elem2 = `<td class="ptc"><input type="text" class="axis"/></td>`;
+                btnAdd2.addEventListener('click', function() {
+                    this.parentElement.insertAdjacentHTML('beforebegin', elem2);
+                    let elem3 = `<td class="ptc"><input type="text" class="epsilon"/></td>`;
+                    tableBody2.childNodes[3].insertAdjacentHTML('beforeend', elem3);
+                });
+            }
+            //Envio de los datos del formulario
+            document.querySelector('#btn_unit4').addEventListener('click', (e)=>{
+                e.preventDefault();
+                let check2 = document.querySelector('#makeTable');
+                let funcion = document.querySelector('#function') ? document.querySelector('#function').value : "";
+                let metodo = document.querySelector("#metodo").value;
+                let xvalues = [];
+                let yvalues = [];
+                if (check2 && check2?.checked) {
+                    let ixvalues = document.querySelectorAll(".axis");
+                    let iyvalues1 = document.querySelectorAll(".epsilon");
+                    if (ixvalues) ixvalues.forEach((ixvalue)=>xvalues.push(ixvalue.value)
+                    );
+                    if (iyvalues1) iyvalues1.forEach((iyvalues)=>yvalues.push(iyvalues.value)
+                    );
+                }
+                if (name == "Derivacion" || name == "Richardson") {
+                    let espaciado = document.querySelector('#spc') ? document.querySelector('#spc').value : "";
+                    let valor = document.querySelector("#value").value;
+                    let orden = document.querySelector("#order").value;
+                    let modo = document.querySelector("#mode").value;
+                    let parametros;
+                    if (name == 'Derivacion') parametros = {
+                        'funcion': funcion,
+                        'metodo': metodo,
+                        'valor': valor,
+                        'espaciado': espaciado,
+                        'orden': orden,
+                        'modo': modo,
+                        'x': xvalues,
+                        'y': yvalues
+                    };
+                    else {
+                        let nivel = document.querySelector("#level").value;
+                        parametros = {
+                            'funcion': funcion,
+                            'metodo': metodo,
+                            'valor': valor,
+                            'espaciado': espaciado,
+                            'orden': orden,
+                            'modo': modo,
+                            'nivel': nivel,
+                            'x': xvalues,
+                            'y': yvalues
+                        };
+                    }
+                    //Envia los datos da la derivada o Richardson
+                    let result = get_data(`${URL}unidad${id}/${name.toLowerCase()}/`, parametros).then((response)=>response.json()
+                    ).then((data)=>{
+                        if (data['error']) Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: data['error']
+                        });
+                        else generate_table(data);
+                    });
+                } else if (name == "Integracion" || name == "Rosemberg") {
+                    let a = document.querySelector("#a").value;
+                    let b = document.querySelector("#b").value;
+                    let parametros;
+                    if (name == 'Integracion') {
+                        let subintervalos = document.querySelector("#intervals").value;
+                        parametros = {
+                            'funcion': funcion,
+                            'metodo': metodo,
+                            'n': subintervalos,
+                            'a': a,
+                            'b': b,
+                            'x': xvalues,
+                            'y': yvalues
+                        };
+                    } else {
+                        let nivel = document.querySelector("#level").value;
+                        parametros = {
+                            'funcion': funcion,
+                            'metodo': metodo,
+                            'a': a,
+                            'b': b,
+                            'nivel': nivel
+                        };
+                    }
+                    //Envio del formulario para Integracion y Rosemberg
+                    let result = get_data(`${URL}unidad${id}/${name.toLowerCase()}/`, parametros).then((response)=>response.json()
+                    ).then((data)=>{
+                        if (data['error']) Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            custonClass: "sweet-class",
+                            text: data['error']
+                        });
+                        else generate_table(data);
+                    });
+                }
+            });
+            break;
+    } // Fin del switch
+} // Fin de la funcion requestData
+;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["dRf9z","4pp4s"], "4pp4s", "parcelRequirec77b")
 
