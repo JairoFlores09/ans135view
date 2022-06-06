@@ -42,8 +42,16 @@ ul {
   list-style: none;
 }
 
-.swal2-popup {
-  font-size: 2.8rem;
+.spinner {
+  text-align: center;
+  margin: 5rem auto;
+}
+
+.spinner svg {
+  height: 6rem;
+  width: 6rem;
+  fill: var(--bg-brown-dark);
+  animation: rotate 2s linear infinite;
 }
 
 .hidden {
@@ -398,6 +406,16 @@ main {
 
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
