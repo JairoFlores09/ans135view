@@ -1,9 +1,32 @@
 'use strict';
-
+import icons from "../img/icons.svg";
 const URL = 'https://ans135proyect.herokuapp.com/ans/';
 const formContainer = document.querySelector('.form-container');
 const requestContainer = document.querySelector('.request-containter');
 const ggb_element = document.querySelector('#ggb-element');
+
+const clear = function(){
+	let spinner = document.querySelector(".spinner");
+	if(spinner){
+		requestContainer.removeChild(spinner);
+	}
+}
+
+const renderSpinner = function(){
+	let tableSummary = document.querySelector(".summary");
+	if(tableSummary){
+		let parent = tableSummary.parentElement;
+		parent.removeChild(tableSummary);
+	}
+	const markup = `
+		<div class="spinner">
+			<svg>
+				<use href="${icons}#icon-loader"></use>
+			</svg>
+		</div>
+	`;
+	formContainer.parentElement.insertAdjacentHTML('beforeend', markup);
+}
 
 const get_data = function(url, data){
 	return fetch(url, {
@@ -16,10 +39,15 @@ const get_data = function(url, data){
 }
 
 const resetTable = function(){
+	let spinner = document.querySelector(".spinner");
 	let tableSummary = document.querySelector(".summary");
 	if(tableSummary){
 		let parent = tableSummary.parentElement;
 		parent.removeChild(tableSummary);
+	}
+	if(spinner){
+		let parent = spinner.parentElement;
+		parent.removeChild(spinner);
 	}
 }
 
@@ -88,11 +116,14 @@ export const requestData = function(element){
 			x.focus();
 			document.querySelector('#btn_unit1').addEventListener('click', (e)=>{
 				e.preventDefault();
+				clear()
+				renderSpinner();
 				let result = get_data(`${URL}unidad${id}/${name.replace(' ', '').toLowerCase()}/`,
 				 {'x': x.value, 'cifras': cifras.value})
 				.then(response => response.json())
 				.then(data => {
 					if(data['error']){
+						clear();
 						Swal.fire({
   						icon: 'error',
   						title: 'Oops...',
@@ -150,6 +181,8 @@ export const requestData = function(element){
 				let allParams = document.querySelectorAll("#params");
 				document.querySelector("#btn_unit2").addEventListener('click', (e)=>{
 					e.preventDefault();
+					clear();
+					renderSpinner();
 					let params = [];
 					allParams.forEach(param => params.push(param.value));
 					if (name.toLowerCase() !== 'bairstow'){
@@ -165,6 +198,7 @@ export const requestData = function(element){
 					then(response => response.json())
 					.then(data => {
 						if(data['error']){
+							clear();
 							Swal.fire({
   							icon: 'error',
   							title: 'Oops...',
@@ -198,7 +232,6 @@ export const requestData = function(element){
 										<td class="ptc init">x</td>
 										<td class="ptc"><input type="text" class="axis"/></td>
 										<td class="ptc"><input type="text" class="axis"/></td>
-										<td class="ptc"><input type="text" class="axis"/></td>
 										<td class="ptc"><button type="button" class="add-col"><i class="fa-solid fa-plus"></i></button></td>
 									</tr>
 								</tbody>
@@ -216,8 +249,13 @@ export const requestData = function(element){
 				this.parentElement.insertAdjacentHTML('beforebegin', elem);
 				if((tableBody.childNodes.length - 2) > 1){
 					let elem2 = `<td class="ptc"><input type="text" class="epsilon"/></td>`;
-					tableBody.lastChild.insertAdjacentHTML('beforeend', elem2);
+					document.querySelectorAll(".ptr")[1].insertAdjacentHTML('beforeend', elem2);
+					if(name == "Hermite"){
+						let elem3 = `<td class="ptc"><input type="text" class="diffepsilon"></td>`;
+						document.querySelectorAll(".ptr")[2].insertAdjacentHTML('beforeend', elem3);
+					}
 				}
+
 			});
 			// funcionalidad para el checkbox
 			let check = document.querySelector("#makeTable");
@@ -226,7 +264,7 @@ export const requestData = function(element){
 					document.querySelector("#poly").value = "";
 					// Si el usuario ha seleccionado introducir los datos por medio de una tabla
 					document.querySelector("#poly").disabled = true;
-					let ncolumns = (document.querySelector(".ptr").childNodes.length)-8;
+					let ncolumns = (document.querySelector(".ptr").childNodes.length)-7;
 					//se crea la fila
 					let row = document.createElement('tr');
 					row.setAttribute("class","ptr");
@@ -246,12 +284,37 @@ export const requestData = function(element){
 						row.appendChild(td);
 					}
 					tableBody.appendChild(row);
+					
+					if(name == "Hermite"){
+
+						let row2 = document.createElement('tr');
+						row2.setAttribute("class","ptr");
+						let init2 = document.createElement('td');
+						init2.setAttribute("class","ptc init");
+						init2.textContent = "y'";
+						row2.appendChild(init2);
+						for(let i = 0; i < ncolumns; i++){
+							let td = document.createElement('td');
+							td.setAttribute('class',"ptc");
+							let input = document.createElement('input');
+							input.setAttribute("type",'text');
+							input.setAttribute('class','diffepsilon');
+							td.appendChild(input);
+							row2.appendChild(td);
+						}
+						tableBody.appendChild(row2);
+					}
 				}
 				else{
 					// Si el usuario va a ingresar la funcion polinomica
 					document.querySelector("#poly").disabled = false;
-					let child = tableBody.lastChild;
-					tableBody.removeChild(child);
+					if(name == "Hermite"){
+						tableBody.removeChild(document.querySelectorAll(".ptr")[2]);
+						tableBody.removeChild(document.querySelectorAll(".ptr")[1]);
+					}else{
+						let child = tableBody.lastChild;
+						tableBody.removeChild(child);
+					}
 				}
 			});
 			//creacion del boton de enviar
@@ -261,6 +324,8 @@ export const requestData = function(element){
 			//Accion para el boton de enviar
 			document.querySelector("#btn_unit3").addEventListener('click', (e)=>{
 				e.preventDefault();
+				clear();
+				renderSpinner();
 				let polinomyal = document.querySelector('#poly')?.value;
 				let xvalues = [];
 				let yvalues = [];
@@ -271,15 +336,32 @@ export const requestData = function(element){
 				if (iyvalues){
 					iyvalues.forEach(iyvalue => yvalues.push(iyvalue.value));
 				}
-				let result = get_data(`${URL}unidad${id}/${name.toLowerCase()}/`, {
-					'polinomio': polinomyal,
-					'interpolar': interpolar,
-					'xi': xvalues,
-					'fi': yvalues,
-				})
+				let parametros = {};
+				if(name == "Hermite"){
+					let dyvalues = []
+					let idyvalues = document.querySelectorAll(".diffepsilon");
+					idyvalues.forEach(idyvalue => dyvalues.push(idyvalue.value));
+					parametros = {
+						'polinomio': polinomyal,
+						'interpolar': interpolar,
+						'xi': xvalues,
+						'fi': yvalues,
+						'dy': dyvalues
+					};
+				}
+				else{
+					parametros = {
+						'polinomio': polinomyal,
+						'interpolar': interpolar,
+						'xi': xvalues,
+						'fi': yvalues
+					};
+				}
+				let result = get_data(`${URL}unidad${id}/${name.toLowerCase()}/`, parametros)
 				.then(response => response.json())
 				.then(data => {
 					if(data['error']){
+						clear();
 						Swal.fire({
 						  icon: 'error',
 						  title: 'Oops...',
@@ -320,12 +402,10 @@ export const requestData = function(element){
 											<td class="ptc init">x</td>
 											<td class="ptc"><input type="text" class="axis"/></td>
 											<td class="ptc"><input type="text" class="axis"/></td>
-											<td class="ptc"><input type="text" class="axis"/></td>
 											<td class="ptc"><button type="button" class="add-col"><i class="fa-solid fa-plus"></i></button></td>
 										</tr>
 										<tr class='ptr'>
 										<td class="ptc init">y</td>
-											<td class="ptc"><input type="text" class="epsilon"/></td>
 											<td class="ptc"><input type="text" class="epsilon"/></td>
 											<td class="ptc"><input type="text" class="epsilon"/></td>
 										</tr>
@@ -427,6 +507,8 @@ export const requestData = function(element){
 			//Envio de los datos del formulario
 			document.querySelector('#btn_unit4').addEventListener('click', (e)=>{
 				e.preventDefault();
+				clear();
+				renderSpinner();
 				let check2 = document.querySelector('#makeTable');
 				let funcion = (document.querySelector('#function')) ? document.querySelector('#function').value : "";
 				let metodo = document.querySelector("#metodo").value;
@@ -479,6 +561,7 @@ export const requestData = function(element){
 					.then(response => response.json())
 					.then(data => {
 						if(data['error']){
+							clear();
 							Swal.fire({
 							  icon: 'error',
 							  title: 'Oops...',
@@ -520,6 +603,7 @@ export const requestData = function(element){
 					.then(response => response.json())
 					.then(data => {
 						if(data['error']){
+							clear();
 							Swal.fire({
 							  icon: 'error',
 							  title: 'Oops...',
