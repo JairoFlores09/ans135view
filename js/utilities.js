@@ -617,5 +617,77 @@ export const requestData = function(element){
 				}
 			});
 			break;
+		case '5':
+			html = `
+				<form id='unit5-form' method='POST'>
+					<div class='method fontvar'>
+						<span class='label'>${description}</span>
+						<div style='margin-top: 2rem;'>
+							<div>
+								<label for='function' class='label'>Ecuacion: </label>
+								<input type="text" name="function" id="function" class="input" placeholder="2*x*y"/>
+								<label for='xi' class='label'>x<sub>i</sub></label>
+								<input type='text' name='xi' id='xi' class='input'>
+								<label for='yi' class='label'>y<sub>i</sub></label>
+								<input type='text' name='yi' id='yi' class='input'>
+							</div>
+							<div style='margin-top: 4rem;>
+								<label for="value" class='label'>valor: </label>
+								<input type='text' name='value' id='value' class='input'>
+								<label for='h' class='label'>h: </label>
+								<input type='text' name='h' id='h' class='input'>
+								<label for='n' class='label'>n: </label>
+								<input type='text' name='n' id='n' class='input'>
+							</div>
+						</div>
+						<button type='submit' id='btn_unit5' class='btn btn-submit'><i class="fa-solid fa-check"></i></button>
+					</div>
+				</form>
+			`;
+			//Se agrega el codigo html al contenedor
+			formContainer.insertAdjacentHTML('afterbegin', html);
+
+			const btn_unit5 = document.querySelector('#btn_unit5');
+
+			//controla el evento del boton de enviar
+			btn_unit5.addEventListener('click', function(e){
+				e.preventDefault();
+				clear();
+				renderSpinner();
+				let ecuation = document.querySelector("#function").value;
+				let xi = document.querySelector("#xi").value;
+				let yi = document.querySelector("#yi").value;
+
+				let value = document.querySelector("#value").value;
+				let h = document.querySelector("#h").value;
+				let n = document.querySelector("#n").value;
+
+				let parametros = {
+					'ecuation': ecuation,
+					'xi': xi,
+					'yi': yi,
+					'value': value,
+					'h': h,
+					'n': n
+				};
+
+				//envia el formulario
+				get_data(`${URL}unidad${id}/${name.toLowerCase()}/`, parametros)
+				.then(response => response.json())
+				.then(data => {
+					if(data['error']){
+					clear();
+					Swal.fire({
+						icon: 'error',
+						title: 'Oops...',
+						custonClass: "sweet-class",
+						text: data['error'],
+					});
+					}else{
+						generate_table(data);
+					}
+				});
+
+			});
 	} // Fin del switch
 } // Fin de la funcion requestData
