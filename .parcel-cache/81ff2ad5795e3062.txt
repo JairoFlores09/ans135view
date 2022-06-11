@@ -60,7 +60,7 @@
 45C:\Users\JairoFlores\Documents\ans135view\css132963479295176517 1
 91C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\package-manager\package.json132963479774239591 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.f8905ca5.js132966986018909071 0
-46C:\Users\JairoFlores\Documents\ans135view\dist132992638207502641 1
+46C:\Users\JairoFlores\Documents\ans135view\dist132994362460195400 1
 111C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\utils\test\input\sourcemap\referenced-min.js.map132963479801447169 0
 69C:\Users\JairoFlores\Documents\ans135view\dist\index.abb61ef8.css.map132965754406464605 0
 93C:\Users\JairoFlores\Documents\ans135view\node_modules\source-map\lib\source-map-generator.js132963479674215321 0
@@ -77,7 +77,7 @@
 102C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\fs-search\fs-search.win32-x64-msvc.node132963479822461327 0
 98C:\Users\JairoFlores\Documents\ans135view\node_modules\caniuse-lite\data\features\text-emphasis.js132963479847671800 0
 65C:\Users\JairoFlores\Documents\ans135view\dist\index.340123af.css132965733795301976 0
-51C:\Users\JairoFlores\Documents\ans135view\info.html132963479296154602 0
+51C:\Users\JairoFlores\Documents\ans135view\info.html132994361332231399 0
 83C:\Users\JairoFlores\Documents\ans135view\node_modules\terser\lib\compress\index.js132963479760525559 0
 78C:\Users\JairoFlores\Documents\ans135view\node_modules\@trysound\sax\README.md132963479699378283 0
 96C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\core\lib\requests\AssetRequest.js132963479773264406 0
@@ -1542,7 +1542,7 @@
 81C:\Users\JairoFlores\Documents\ans135view\node_modules\@babel\highlight\README.md132963479760815589 0
 79C:\Users\JairoFlores\Documents\ans135view\node_modules\nullthrows\nullthrows.js132963479657329701 0
 84C:\Users\JairoFlores\Documents\ans135view\node_modules\nullthrows\nullthrows.js.flow132963479657943843 0
-56C:\Users\JairoFlores\Documents\ans135view\dist\info.html132990079458566784 0
+56C:\Users\JairoFlores\Documents\ans135view\dist\info.html132994362460173444 0
 88C:\Users\JairoFlores\Documents\ans135view\node_modules\dom-serializer\lib\index.d.ts.map132963479676511996 0
 78C:\Users\JairoFlores\Documents\ans135view\node_modules\nullthrows\package.json132963479648435804 0
 68C:\Users\JairoFlores\Documents\ans135view\node_modules\nth-check\lib132963479689102481 1
