@@ -649,7 +649,7 @@ export const requestData = function(element){
 								<input type='text' name='h' id='h' class='input'>
 								<label for='n' class='label'>n: </label>
 								<input type='text' name='n' id='n' class='input'>
-								<labe for='grade' class="label">Grado: </label>
+								${name == 'Taylor' ? "<labe for='grade' class='label'>Grado: </label>": ''}
 								${name == 'Taylor' ? "<input type='text' name='grade' id='grade' class='input'>": ''}
 							</div>
 						</div>
