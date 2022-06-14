@@ -650,7 +650,7 @@ export const requestData = function(element){
 								<label for='n' class='label'>n: </label>
 								<input type='text' name='n' id='n' class='input'>
 								<labe for='grade' class="label">Grado: </label>
-								<input type="text" name='grade' id='grade' class='input'>
+								${name == 'Taylor' ? "<input type='text' name='grade' id='grade' class='input'>": ''}
 							</div>
 						</div>
 						<button type='submit' id='btn_unit5' class='btn btn-submit'><i class="fa-solid fa-check"></i></button>
@@ -736,6 +736,7 @@ export const requestData = function(element){
 				}
 
 				//envia el formulario
+				console.log(`${URL}unidad${id}/${name.toLowerCase()}/`);
 				get_data(`${URL}unidad${id}/${name.toLowerCase()}/`, parametros)
 				.then(response => response.json())
 				.then(data => {
