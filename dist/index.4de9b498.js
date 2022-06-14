@@ -626,6 +626,7 @@ var _iconsSvg = require("../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 'use strict';
 const URL = 'https://ans135server.herokuapp.com/ues/';
+//const URL = 'http://127.0.0.1:8000/ues/';
 const formContainer = document.querySelector('.form-container');
 const requestContainer = document.querySelector('.request-containter');
 const ggb_element = document.querySelector('#ggb-element');
@@ -1230,7 +1231,7 @@ const requestData = function(element) {
 								<input type='text' name='h' id='h' class='input'>
 								<label for='n' class='label'>n: </label>
 								<input type='text' name='n' id='n' class='input'>
-								<labe for='grade' class="label">Grado: </label>
+								${name == 'Taylor' ? "<labe for='grade' class='label'>Grado: </label>" : ''}
 								${name == 'Taylor' ? "<input type='text' name='grade' id='grade' class='input'>" : ''}
 							</div>
 						</div>

@@ -1,4 +1,4 @@
-4321
+4326
 94C:\Users\JairoFlores\Documents\ans135view\node_modules\electron-to-chromium\full-versions.json132963479690508679 0
 65C:\Users\JairoFlores\Documents\ans135view\dist\index.0f04db12.css132965732961365174 0
 106C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mdb_drop.c132963479762979905 0
@@ -38,7 +38,7 @@
 82C:\Users\JairoFlores\Documents\ans135view\node_modules\css-select\lib\compile.d.ts132963479760873048 0
 90C:\Users\JairoFlores\Documents\ans135view\node_modules\caniuse-lite\data\features\asmjs.js132963479764237286 0
 102C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\core\lib\requests\BundleGraphRequest.js132963479775241609 0
-45C:\Users\JairoFlores\Documents\ans135view\img132990071170776306 1
+45C:\Users\JairoFlores\Documents\ans135view\img132996990898239577 1
 104C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\module.c132963479775167872 0
 86C:\Users\JairoFlores\Documents\ans135view\node_modules\caniuse-lite\data\regions\CY.js132963479825954352 0
 104C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\runtime-js\lib\helpers\node\css-loader.js132963479750565502 0
@@ -60,7 +60,7 @@
 45C:\Users\JairoFlores\Documents\ans135view\css132963479295176517 1
 91C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\package-manager\package.json132963479774239591 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.f8905ca5.js132966986018909071 0
-46C:\Users\JairoFlores\Documents\ans135view\dist132996966651858303 1
+46C:\Users\JairoFlores\Documents\ans135view\dist132996991427537101 1
 111C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\utils\test\input\sourcemap\referenced-min.js.map132963479801447169 0
 69C:\Users\JairoFlores\Documents\ans135view\dist\index.abb61ef8.css.map132965754406464605 0
 93C:\Users\JairoFlores\Documents\ans135view\node_modules\source-map\lib\source-map-generator.js132963479674215321 0
@@ -100,7 +100,7 @@
 97C:\Users\JairoFlores\Documents\ans135view\node_modules\svgo\plugins\removeAttributesBySelector.js132963479760973906 0
 67C:\Users\JairoFlores\Documents\ans135view\node_modules\browserslist132963479714821740 1
 86C:\Users\JairoFlores\Documents\ans135view\node_modules\caniuse-lite\data\regions\AW.js132963479773802726 0
-52C:\Users\JairoFlores\Documents\ans135view\index.html132992636798101833 0
+52C:\Users\JairoFlores\Documents\ans135view\index.html132996991175477346 0
 73C:\Users\JairoFlores\Documents\ans135view\node_modules\mdn-data\README.md132963479757814984 0
 89C:\Users\JairoFlores\Documents\ans135view\node_modules\svgo\plugins\convertShapeToPath.js132963479690823642 0
 100C:\Users\JairoFlores\Documents\ans135view\node_modules\caniuse-lite\data\features\async-clipboard.js132963479764526980 0
@@ -1231,6 +1231,7 @@
 69C:\Users\JairoFlores\Documents\ans135view\node_modules\nan\doc\new.md132963479762763982 0
 78C:\Users\JairoFlores\Documents\ans135view\node_modules\color-convert\README.md132963479690972018 0
 82C:\Users\JairoFlores\Documents\ans135view\node_modules\svgo\plugins\removeAttrs.js132963479761248339 0
+68C:\Users\JairoFlores\Documents\ans135view\dist\favicon.1ac1544e.jpeg132996991189149001 0
 85C:\Users\JairoFlores\Documents\ans135view\node_modules\svgo\plugins\removeComments.js132963479761759186 0
 78C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\fs\src\types.js132963479761424076 0
 71C:\Users\JairoFlores\Documents\ans135view\node_modules\error-ex\LICENSE132963479659468486 0
@@ -1453,6 +1454,7 @@
 119C:\Users\JairoFlores\Documents\ans135view\node_modules\posthtml\node_modules\posthtml-parser\dist\location-tracker.d.ts132963479773570046 0
 125C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\core\test\fixtures\invalid-target-source-not-file\src\index.js132963479799788714 0
 74C:\Users\JairoFlores\Documents\ans135view\node_modules\posthtml\lib\api.js132963479648904734 0
+64C:\Users\JairoFlores\Documents\ans135view\dist\index.ec155ede.js132996971371757162 0
 84C:\Users\JairoFlores\Documents\ans135view\node_modules\@swc\helpers\lib\_to_array.js132963479776434033 0
 79C:\Users\JairoFlores\Documents\ans135view\node_modules\postcss-value-parser\lib132963479659037793 1
 90C:\Users\JairoFlores\Documents\ans135view\node_modules\postcss-value-parser\lib\index.d.ts132963479659624730 0
@@ -1823,7 +1825,7 @@
 74C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\src\writer.cpp132963479799023090 0
 91C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\dependencies\lz4\lib\lz4frame.c132963479761046729 0
 131C:\Users\JairoFlores\Documents\ans135view\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-module-fallback132963479801357539 1
-57C:\Users\JairoFlores\Documents\ans135view\dist\index.html132996966651799186 0
+57C:\Users\JairoFlores\Documents\ans135view\dist\index.html132996991427475904 0
 106C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mdb_dump.c132963479764343367 0
 90C:\Users\JairoFlores\Documents\ans135view\node_modules\caniuse-lite\data\regions\alt-sa.js132963479759986592 0
 80C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\prebuilds\darwin-x64132963479880959342 1
@@ -1908,7 +1910,7 @@
 84C:\Users\JairoFlores\Documents\ans135view\node_modules\chrome-trace-event\CHANGES.md132963479678329423 0
 114C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\dependencies\lz4\lib\dll\example\fullbench-dll.vcxproj132963479903719128 0
 106C:\Users\JairoFlores\Documents\ans135view\node_modules\caniuse-lite\data\features\link-rel-dns-prefetch.js132963479841501879 0
-57C:\Users\JairoFlores\Documents\ans135view\js\utilities.js132996966420056251 0
+57C:\Users\JairoFlores\Documents\ans135view\js\utilities.js132996991253282691 0
 88C:\Users\JairoFlores\Documents\ans135view\node_modules\htmlnano\lib\modules\minifySvg.js132963479714847523 0
 111C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\LICENSE132963479677860613 0
 69C:\Users\JairoFlores\Documents\ans135view\node_modules\dotenv\LICENSE132963479662029120 0
@@ -1962,7 +1964,6 @@
 110C:\Users\JairoFlores\Documents\ans135view\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\sample-mdb.txt132963479903716939 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.2083bf16.js132965759575399705 0
 78C:\Users\JairoFlores\Documents\ans135view\node_modules\lines-and-columns\build132963479658725444 1
-65C:\Users\JairoFlores\Documents\ans135view\dist\index.2e658e90.css132965750493522401 0
 86C:\Users\JairoFlores\Documents\ans135view\node_modules\caniuse-lite\data\regions\SK.js132963479847203095 0
 92C:\Users\JairoFlores\Documents\ans135view\node_modules\@swc\helpers\src\_set_prototype_of.js132963479802359824 0
 85C:\Users\JairoFlores\Documents\ans135view\node_modules\lines-and-columns\package.json132963479657485075 0
@@ -2079,6 +2080,7 @@
 96C:\Users\JairoFlores\Documents\ans135view\node_modules\caniuse-lite\data\features\eventsource.js132963479827047975 0
 97C:\Users\JairoFlores\Documents\ans135view\node_modules\caniuse-lite\data\features\setimmediate.js132963479847046863 0
 84C:\Users\JairoFlores\Documents\ans135view\node_modules\css-tree\lib\parser\create.js132963479751358384 0
+68C:\Users\JairoFlores\Documents\ans135view\dist\favicon.19bb58ac.jpeg132996991368332075 0
 85C:\Users\JairoFlores\Documents\ans135view\node_modules\htmlnano\lib\modules\custom.js132963479669215735 0
 69C:\Users\JairoFlores\Documents\ans135view\dist\index.249b6381.css.map132965707792176799 0
 91C:\Users\JairoFlores\Documents\ans135view\node_modules\htmlnano\lib\modules\mergeScripts.js132963479694429337 0
@@ -2149,7 +2151,7 @@
 88C:\Users\JairoFlores\Documents\ans135view\node_modules\htmlnano\docs\docs\040-presets.md132963479775011417 0
 88C:\Users\JairoFlores\Documents\ans135view\node_modules\htmlnano\docs\docs\050-modules.md132963479775398280 0
 91C:\Users\JairoFlores\Documents\ans135view\node_modules\htmlnano\docs\docs\060-contribute.md132963479775975920 0
-68C:\Users\JairoFlores\Documents\ans135view\dist\index.b9ec0ee6.js.map132996966651839090 0
+68C:\Users\JairoFlores\Documents\ans135view\dist\index.b9ec0ee6.js.map132996991427515695 0
 71C:\Users\JairoFlores\Documents\ans135view\node_modules\has-flag\license132963479659312159 0
 111C:\Users\JairoFlores\Documents\ans135view\node_modules\caniuse-lite\data\features\same-site-cookie-attribute.js132963479845484534 0
 86C:\Users\JairoFlores\Documents\ans135view\node_modules\caniuse-lite\data\regions\TN.js132963479847984267 0
@@ -4174,6 +4176,7 @@
 70C:\Users\JairoFlores\Documents\ans135view\node_modules\.bin\terser.cmd132963481453472202 0
 70C:\Users\JairoFlores\Documents\ans135view\node_modules\.bin\terser.ps1132963481453472202 0
 66C:\Users\JairoFlores\Documents\ans135view\js\views\GeogebraView.js132963479296154602 0
+58C:\Users\JairoFlores\Documents\ans135view\img\favicon.jpeg132996988939077051 0
 55C:\Users\JairoFlores\Documents\ans135view\img\icons.svg132990033093221965 0
 75C:\Users\JairoFlores\Documents\ans135view\dist\fa-brands-400.88e681c6.woff2132963577379976935 0
 73C:\Users\JairoFlores\Documents\ans135view\dist\fa-brands-400.f70fba4c.ttf132988452525093976 0
@@ -4195,6 +4198,7 @@
 68C:\Users\JairoFlores\Documents\ans135view\dist\index.28b86ec5.js.map132965827723373025 0
 65C:\Users\JairoFlores\Documents\ans135view\dist\index.2d473a37.css132965702328286508 0
 69C:\Users\JairoFlores\Documents\ans135view\dist\index.2d473a37.css.map132965702328347525 0
+65C:\Users\JairoFlores\Documents\ans135view\dist\index.2e658e90.css132965750493522401 0
 69C:\Users\JairoFlores\Documents\ans135view\dist\index.340123af.css.map132965733795324348 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.38206086.js132967900104356260 0
 68C:\Users\JairoFlores\Documents\ans135view\dist\index.38206086.js.map132967900104482329 0
@@ -4212,8 +4216,8 @@
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.4bc47997.js132966998732573544 0
 68C:\Users\JairoFlores\Documents\ans135view\dist\index.4bc47997.js.map132966998732606943 0
 68C:\Users\JairoFlores\Documents\ans135view\dist\index.4cdb4693.js.map132967894031817175 0
-64C:\Users\JairoFlores\Documents\ans135view\dist\index.4de9b498.js132996956774225839 0
-68C:\Users\JairoFlores\Documents\ans135view\dist\index.4de9b498.js.map132996956774290705 0
+64C:\Users\JairoFlores\Documents\ans135view\dist\index.4de9b498.js132996991258993701 0
+68C:\Users\JairoFlores\Documents\ans135view\dist\index.4de9b498.js.map132996991259025376 0
 62C:\Users\JairoFlores\Documents\ans135view\css\v5-font-face.css132963479295176517 0
 68C:\Users\JairoFlores\Documents\ans135view\dist\index.508b6aa3.js.map132996416442960231 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.572bfba2.js132988447826366920 0
@@ -4271,7 +4275,7 @@
 69C:\Users\JairoFlores\Documents\ans135view\dist\index.b3375583.css.map132965754903064501 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.b66c9d1a.js132963577405044082 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.b83cac5b.js132965700640633427 0
-64C:\Users\JairoFlores\Documents\ans135view\dist\index.b9ec0ee6.js132996966651799186 0
+64C:\Users\JairoFlores\Documents\ans135view\dist\index.b9ec0ee6.js132996991427497617 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.bed05b6a.js132967725442335517 0
 68C:\Users\JairoFlores\Documents\ans135view\dist\index.bed05b6a.js.map132967725442496581 0
 69C:\Users\JairoFlores\Documents\ans135view\dist\index.c0193df5.css.map132965690048547135 0
@@ -4295,6 +4299,7 @@
 68C:\Users\JairoFlores\Documents\ans135view\dist\index.e47c43a4.js.map132965762241717382 0
 65C:\Users\JairoFlores\Documents\ans135view\dist\index.e4de4121.css132990079458566784 0
 65C:\Users\JairoFlores\Documents\ans135view\dist\index.eb6263d2.css132963577405044082 0
+68C:\Users\JairoFlores\Documents\ans135view\dist\index.ec155ede.js.map132996971371886004 0
 68C:\Users\JairoFlores\Documents\ans135view\dist\index.ec407962.js.map132965747387867338 0
 64C:\Users\JairoFlores\Documents\ans135view\dist\index.f25d318e.js132965774676902184 0
 68C:\Users\JairoFlores\Documents\ans135view\dist\index.f25d318e.js.map132965774676939980 0
