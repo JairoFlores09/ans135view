@@ -650,8 +650,8 @@ export const requestData = function(element){
 								<input type='text' name='h' id='h' class='input'>
 								<label for='n' class='label'>n: </label>
 								<input type='text' name='n' id='n' class='input'>
-								${name == 'Taylor' ? "<labe for='grade' class='label'>Grado: </label>": ''}
-								${name == 'Taylor' ? "<input type='text' name='grade' id='grade' class='input'>": ''}
+								${name == 'Taylor' || name == 'RungeKutta' ? "<labe for='grade' class='label'>Grado: </label>": ''}
+								${name == 'Taylor' || name == 'RungeKutta' ? "<input type='text' name='grade' id='grade' class='input'>": ''}
 							</div>
 						</div>
 						<button type='submit' id='btn_unit5' class='btn btn-submit'><i class="fa-solid fa-check"></i></button>
@@ -725,7 +725,20 @@ export const requestData = function(element){
 						'grade': grade,
 						'ndiffs': ndiffs
 					};
-				}else{
+				}
+				else if(name == 'RungeKutta'){
+					let grade = document.querySelector("#grade").value;
+					parametros = {
+						'ecuation': ecuation,
+						'xi': xi,
+						'yi': yi,
+						'value': value,
+						'h': h,
+						'n': n,
+						'grade': grade
+					};
+				}
+				else{
 					parametros = {
 						'ecuation': ecuation,
 						'xi': xi,
