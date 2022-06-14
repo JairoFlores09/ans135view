@@ -625,7 +625,7 @@ parcelHelpers.export(exports, "requestData", ()=>requestData
 var _iconsSvg = require("../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 'use strict';
-const URL = 'https://ans135proyect.herokuapp.com/ans/';
+const URL = 'https://ans135server.herokuapp.com/ues/';
 const formContainer = document.querySelector('.form-container');
 const requestContainer = document.querySelector('.request-containter');
 const ggb_element = document.querySelector('#ggb-element');

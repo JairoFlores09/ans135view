@@ -1,6 +1,6 @@
 'use strict';
 import icons from "../img/icons.svg";
-const URL = 'https://ans135proyect.herokuapp.com/ans/';
+const URL = 'https://ans135server.herokuapp.com/ues/';
 const formContainer = document.querySelector('.form-container');
 const requestContainer = document.querySelector('.request-containter');
 const ggb_element = document.querySelector('#ggb-element');
