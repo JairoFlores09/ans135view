@@ -411,6 +411,54 @@ main{
 	pointer-events: none;
 }
 
+/* Estilos para la tabla de EDO's */
+.edos-table,
+.edos-table tr,
+.edos-table tr td{
+	border: 1px solid var(--bg-brown-extra-dark);
+	border-collapse: collapse;
+}
+.edos-table{
+	margin: 3.5rem auto 0 auto;
+}
+.edos-function{
+	width: 25rem;
+	height: 3.5rem;
+	background-color: transparent;
+	border: none;
+	/*border-bottom: 1px solid var(--bg-brown-extra-dark);*/
+	padding: 0.2rem;
+	font-size: 1.8rem;
+}
+
+.edos-function input{
+	width: 25rem;
+	height: 3.5rem;
+	background-color: transparent;
+	border: none;
+	/*border-bottom: 1px solid var(--bg-brown-extra-dark);*/
+	padding: 0.2rem;
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+.edos-function input:focus{
+	outline: none;
+}
+
+.del-col{
+	border: none;
+	background-color: rgb(255, 0, 0);
+	color: white;
+	width: 2.5rem;
+	height: 4rem;
+	transition: all 0.2s ease;
+}
+
+.del-col:hover{
+	background-color: rgb(180, 0, 0);
+}
+
 
 @keyframes shake{
 	0%{

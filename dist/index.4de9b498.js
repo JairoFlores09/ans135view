@@ -864,8 +864,8 @@ const requestData = function(element) {
                 }
             });
             // funcionalidad para el checkbox
-            let check = document.querySelector("#makeTable");
-            check.addEventListener('change', function() {
+            let check1 = document.querySelector("#makeTable");
+            check1.addEventListener('change', function() {
                 if (this.checked) {
                     document.querySelector("#poly").value = "";
                     // Si el usuario ha seleccionado introducir los datos por medio de una tabla
@@ -1205,13 +1205,24 @@ const requestData = function(element) {
 						<span class='label'>${description}</span>
 						<div style='margin-top: 2rem;'>
 							<div>
-								<label for='function' class='label'>Ecuacion: </label>
-								<input type="text" name="function" id="function" class="input" placeholder="2*x*y"/>
+								<label for='function' class='label'>Ecuación: </label>
+								<input type="text" name="function" id="function" class="input" placeholder="y - x^2 + x + 1"/>
 								<label for='xi' class='label'>x<sub>i</sub></label>
 								<input type='text' name='xi' id='xi' class='input'>
 								<label for='yi' class='label'>y<sub>i</sub></label>
 								<input type='text' name='yi' id='yi' class='input'>
+								${name == 'Taylor' ? '<label for="makeTable" class="label">Ingresar EDOs manualmente </label>' : ''}
+								${name == 'Taylor' ? '<input type="checkbox" name="makeTable" id="makeTable"/>' : ''}
 							</div>
+							<table class="edos-table hidden">
+								<tbody class="edos-body">
+									<tr class="ptr">
+										<td class="ptc init">y''</td>
+										<td class="edos-function"><input type="text" class="ndiff"></td>
+										<td class="ptc"><button type="button" class="add-col"><i class="fa-solid fa-plus"></i></button></td>
+									</tr>
+								</tbody>
+							</table>
 							<div style='margin-top: 4rem;>
 								<label for="value" class='label'>valor: </label>
 								<input type='text' name='value' id='value' class='input'>
@@ -1219,6 +1230,8 @@ const requestData = function(element) {
 								<input type='text' name='h' id='h' class='input'>
 								<label for='n' class='label'>n: </label>
 								<input type='text' name='n' id='n' class='input'>
+								<labe for='grade' class="label">Grado: </label>
+								<input type="text" name='grade' id='grade' class='input'>
 							</div>
 						</div>
 						<button type='submit' id='btn_unit5' class='btn btn-submit'><i class="fa-solid fa-check"></i></button>
@@ -1227,6 +1240,32 @@ const requestData = function(element) {
 			`;
             //Se agrega el codigo html al contenedor
             formContainer.insertAdjacentHTML('afterbegin', html);
+            //Eventos para la tabla. Solo es valido para el metodo de Taylor
+            if (name == 'Taylor') {
+                let check = document.querySelector("#makeTable");
+                let table = document.querySelector(".edos-table");
+                check.addEventListener('change', ()=>{
+                    table.classList.toggle("hidden");
+                });
+            }
+            let tableBody3 = document.querySelector(".edos-body");
+            let addRow = document.querySelector(".add-col");
+            //evento para agregar mas filas
+            addRow.addEventListener('click', function() {
+                let n = document.querySelectorAll(".ptr").length;
+                const row = `
+					<tr class="ptr">
+						<td class="ptc init">y<sup>${n + 2}</sup></td>
+						<td class="edos-function"><input type="text" class="ndiff"></td>
+						<td class="ptc"><button type="button" class="del-col"><i class="fa-solid fa-trash-can"></i></button></td>
+					</tr>
+				`;
+                tableBody3.insertAdjacentHTML('beforeend', row);
+            });
+            //evento para eliminar fila
+            tableBody3.addEventListener('click', function(e) {
+                if (e.target.parentElement.classList.contains('del-col')) tableBody3.removeChild(e.target.parentElement.parentElement.parentElement);
+            });
             const btn_unit5 = document.querySelector('#btn_unit5');
             //controla el evento del boton de enviar
             btn_unit5.addEventListener('click', function(e) {
@@ -1239,7 +1278,25 @@ const requestData = function(element) {
                 let value = document.querySelector("#value").value;
                 let h = document.querySelector("#h").value;
                 let n = document.querySelector("#n").value;
-                let parametros = {
+                let parametros;
+                if (name == "Taylor") {
+                    let indiffs = document.querySelectorAll(".ndiff");
+                    let grade = document.querySelector("#grade").value;
+                    let check = document.querySelector("#makeTable");
+                    let ndiffs = [];
+                    if (indiffs && check.checked) indiffs.forEach((indiff)=>ndiffs.push(indiff.value)
+                    );
+                    parametros = {
+                        'ecuation': ecuation,
+                        'xi': xi,
+                        'yi': yi,
+                        'value': value,
+                        'h': h,
+                        'n': n,
+                        'grade': grade,
+                        'ndiffs': ndiffs
+                    };
+                } else parametros = {
                     'ecuation': ecuation,
                     'xi': xi,
                     'yi': yi,
@@ -1261,6 +1318,7 @@ const requestData = function(element) {
                     } else generate_table(data);
                 });
             });
+            break;
     } // Fin del switch
 } // Fin de la funcion requestData
 ;
