@@ -181,6 +181,7 @@ export const requestData = function(element){
 				let cifras = document.querySelector("#cifras");
 				let allParams = document.querySelectorAll("#params");
 				document.querySelector("#btn_unit2").addEventListener('click', (e)=>{
+					console.log(`${URL}unidad${id}/${name.toLowerCase()}/`);
 					e.preventDefault();
 					clear();
 					renderSpinner();

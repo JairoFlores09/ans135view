@@ -459,6 +459,78 @@ main{
 	background-color: rgb(180, 0, 0);
 }
 
+/* Estilos para la pagina de integrantes */
+.members-container{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.members{
+	width: 130rem;
+	height: 20rem;
+	display: flex;
+	justify-content:  space-between;
+	transform: translateY(-50%);
+}
+
+.member{
+	position: relative;
+	width: 20rem;
+	height: 20rem;
+	border-radius: 50%;
+	box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, .5);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.member--1{
+	background-image: url("../img/member2.jpg");
+}
+
+.member--2{
+	background-image: url("../img/miembro2.jpeg");
+}
+.member--3{
+	background-image: url("../img/miembro3.jpeg");
+}
+
+.member--4{
+	background-image: url("../img/miembro4.jpeg");
+}
+
+.member--5{
+	background-image: url("../img/miembro1.jpg");
+}
+
+.member-info{
+	position: absolute;
+	font-size: 1.2rem;
+	width: 25rem;
+	top: 95%;
+	text-align: center;
+	color: white;
+	background-color: #453D3F;
+	padding: 2rem 1rem 1rem 1rem;
+	border-radius: .5rem;
+	box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .5);
+	z-index: -1;
+	text-transform: uppercase;
+}
+
+.name{
+	font-weight: bold;
+}
+
+.carnet{
+	color: #F4C63D;
+}
+
 
 @keyframes shake{
 	0%{

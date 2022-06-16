@@ -6,6 +6,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="shorcut icon" href="img/favicon.jpeg" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Más información</title>
@@ -14,7 +15,7 @@
 	<header class="header">
 		<ul class="header__list">
 			<li class="header__item"><a href="index.html">Inicio</a></li>
-			<li class="header__item"><a href="#">Integrantes</a></li>
+			<li class="header__item"><a href="integrantes.html">Integrantes</a></li>
 			<li class="header__item"><a href="info.html">Más información</a></li>
 			<li class="header__item"><a href="https://github.com/Jeanetth/trabajo_Final/tree/main/ApiRest/ans135rest/metodos" target="_blank"><i class="fa-brands fa-github"></i> Github</a></li>
 		</ul>
@@ -175,14 +176,146 @@
 			<!-- UNIDAD 3 -->
 			<div class="info-container">
 				<h3>Unidad 3 - Interpolaciones</h3>
+				<p>En la ingeniería con frecuencia se econtrará con que tiene que estimar valores intermedios entre puntos asociados con datos. El método más común que se usa para este propósito
+					es la interpolación polinomial. Dados <b><i>n + 1 </i></b> puntos asociados con datos, hay uno y sólo un plinomio de grado <b><i>n </i></b> que pasa a través de todos los puntos. Por ejemplo, hay
+					sólo una línea recta (es decir, un polinomio de primer grado) que une dos puntos. De manera similar, únicamente una parábola une un conjunto de tres puntos. La interpolación
+					polinomial consiste en determinar el polinomio único de <b><i>n-ésimo </i></b> grado que se ajuste a <b><i>n + 1 </i></b> puntos asociados con datos. Este polinomio, entonces, proporciona una fórmula
+					para calcular valores intermedios.
+					Aunque hay un sólo polinomio de <b><i>n-ésimo </i></b> grado que se ajusta a <b><i>n + 1 </i></b> puntos, existe una gran variedad de formas matemáticas en las cuales puede expresarse
+					este polinomio. En esta sección encontrará alternativas que son muy adecuadas para encontrar estos polinomios.
+
+					<div style="margin-bottom: 1rem;">
+						<p><b>Los siguientes parámetros aplican para cualquier método numérico de esta unidad:</b></p>
+						<br/>
+						<p><b>Polinomio: </b> <i>Ej: </i><i>x<sup> 2</sup> - 5x + 4</i>. Pedes consultar el listado de funciones al final de este documento.</p>
+						<br/>
+						<p><b>Interpolar: </b> Valor intermedio a estimar</p>
+						<br/>
+						<p><b>x: </b>Serie de valores para x. El mínimo de puntos que se pueden ingresar son dos puntos (puede agregar más puntos si lo desea presionando el botón con signo "+").</p>
+						<br/>
+						<p><i>En ocasiones se tiene una tabla de valores discretos generados a partir de una proceso experimental para los cuales es necesario realizar una interpolación, si ese es el caso, marque la casilla 
+							"Ingresar los datos en una tabla" y automáticamente se habilitará una segunda fila para ingresar los valores correspondientes asociados a cada punto de x
+						</i></p>
+					</div>
+				</p>
 			</div>
 			<!-- UNIDAD 4 -->
 			<div class="info-container">
-				<h3>Unidad 4 - Proximamente</h3>
+				<h3>Unidad 4 - Diferenciación e Integración numéricas</h3>
+				<p>El cálculo es la matemática del cambio. Como los ingenieros deben tratar en forma continua con sistemas y procesos que cambian, el cálculo es una herramienta esencial
+					en nuestra profesión. En la esencia del cálculo están dos conceptos matemáticos relacionados: la difrenciación y la integración.<br/>
+					De acuerdo a la definición del diccionario, <i>diferenciar </i> significa "marcar por diferencias; distinguir;... percibir la direncia en o entre".
+					En el contexto de las matemáticas, la derivada sirve como el principal vehículo para la diferenciación, representa la razón de cambio de una variable dependiente
+					con respecto a una variable independiente. <br/>
+					En cálculo, el proceso inverso de la diferenciación es la integración. De acuerdo con la definición del diccionario, <i>integrar </i> significa "juntar partes en un todo; unir; indicar la cantidad total ..." <br/>
+					Debido a esa estrecha relación, esta sección incluye ambos porcesos utilizando difentes métodos de los cuales el usuario puede hacer uso. <br/>
+					Los métodos numéricos presentados en esta unidad son especialmente útiles para obtener aproximaciones a integrales que son sumamente complicadas o imposibles de resolver de forma analítica. Tanto
+					la diferenciación como la integración cuentan con un método adaptativo mejorado que proporciona aproximaciones más precisas; El método adaptativo de la diferenciación
+					numérica es la Extrapolación de Richardson, así como la Integración por el método de Rosemberg lo es para la integración.
+				</p>
+				<div style="margin-top: 1rem;">
+					<h3>Derivación Numérica</h3>
+					<p>En la derivación numérica contamos con diferentes métodos para la diferenciación: Hacia adelante, Hacia atrás, Diferencias centradas, Diferenciación con tres y cinco puntos.
+						Estas opciones están disponibles para la selección del usuario, además de poder especificar el orden de la derivada que se desea calcular, ya sea, la primer derivada, segunda,
+						tercera o cuarta derivada. Algunos métodos tienen dos modos de aproximación (en la mayoría de las ocasiones el modo de segunda diferencia resulta ser más preciso que el modo de primer diferencia),
+						se deja a libertad del usuario experimentar para determinar que modo le brinda una mejor aproximación.
+					</p>
+					<p><b>Es responsabilidad del usuario proporcionar la siguiente información:</b></p>
+					<p> - <b>Función objetivo o Tabla de datos: </b> Una anula a la otra, es decir, si se ingresa una función, se omite la tabla de datos y biseversa.</p>
+					<p> - <b>Tamaño de espaciado: </b> Representado con el parámetro "h"</p>
+					<p> - <b>Valor objetivo: </b> Valor en el que será evaluada la derivada obtenida</p>
+					<p> Para el método de Extrapolación de Richardson se agrega un nuevo parámetro:</p>
+					<p> - <b>Nivel: </b> El método de Richardson está basado en el método de diferencias divididas de Newton. Mientras mayor sea el nivel, se obtiene una mejor aproximación al valor real pero requiere mayor tiempo de procesamiento.<br/>
+						<i>Es posible omitir este campo y el sistema usará por defecto 2 niveles de diferencia</i>
+					</p>
+					<p><i>Se elimina la posibilidad de ingresar los datos por medio de una tabla</i></p>
+				</div>
+				<div style="margin-top: 1rem;">
+					<h3>Integración Numérica</h3>
+					<p>Al igual que en la Derivación Numérica, en la integración contamos con diferentes métodos: Trapecio Compuesto, Simpson 1/3 y Simpson 3/8. Unos proporcionan mejores aproximaciones que otros,
+						lo dejamos a libertad del usuario elegir el que mejor se acerque al valor deseado.
+					</p>
+					<p><b>El usuario debe proporcionar la siguiente información:</b></p>
+					<p> - <b>Función objetivo o Tabla de datos:</b>  Una anula a la otra, es decir, si se ingresa una función, se omite la tabla de datos y biseversa.</p>
+					<p> - <b>Límites de integración: </b> Se requiere un límite inferior (a) y un límite superior (b) para una integral definida</p>
+					<p> - <b>Cantidad de Subintervalos: </b> Este parámetro es requerido en caso de ingresar una función, en su lugar, si se ingresa una tabla de datos, este parámetro es inferido y puede omitirse.
+						Si se proporciona una tabla de datos y además un valor de subintervalo, este será ignorado por el sistema.
+					</p>
+					<p><i><b>Importante para su consideración:</b></i><br/>
+						Los método de Simpson 1/3 y 3/8 tienen restricciones en la cantidad de subintervalos necesarios para funcionar. Estas restricciones son importantes de considerar cuando ingresa
+						una tabla de datos ya que el método de Simpson 1/3 requiere que la cantidad de subintervalos sea par, mientras que Simpson 3/8 requiere una cantidad de subintervalos múltiplo de tres <br/>
+						Si no se respetan estas restricciones recibirá un error y no se realizarán los cálculos hasta que ingrese parámetros válidos. 
+					</p>
+					<p> Para el método de Rosemberg se agrega un nuevo parámetro:</p>
+					<p> - <b>Nivel: </b> El método de Rosemberg también está basado en el método de diferencias divididas de Newton. Mientras mayor sea el nivel, se obtiene una mejor aproximación al valor real pero requiere mayor tiempo de procesamiento.<br/>
+						<i>Es posible omitir este campo y el sistema usará por defecto 2 niveles de diferencia</i>
+					</p>
+					<p><i>Se elimina la posibilidad de ingresar los datos por medio de una tabla</i></p>
+				</div>
 			</div>
 			<!-- UNIDAD 5 -->
 			<div class="info-container">
-				<h3>Unidad 5 - Proximamente</h3>
+				<h3>Unidad 5 - Ecuaciones Diferenciales Ordinarias (EDO's)</h3>
+				<p>Las leyes fundamentales de la física: la mecánica, la electricidad y la termodinámica con frecuencia se basan en observaciones empíricas que explican las
+					variaciones de los sistemas. Más que en describir directamente el estado de los sistemas físicos, las leyes a menudo se expresan en términos de los cambios
+					del espacio y del tiempo. Cuando una función tiene una variable independiente, la ecuación se llama <i>ecuación diferencial ordinaria (o EDO).</i> Muchas de
+					las ecuaciones diferenciales de importancia práctica no se pueden resolver utilizando los métodos analíticos de cálculo. Así los métodos que se encuentran en
+					esta unidad resultan extremadamente importantes en todos los campos de la ingeniería.
+				</p>
+				<div style="margin-top: 1rem;">
+					<h3>Método de Euler para solución de EDO's</h3>
+					<p>También conocido como <i>Euler-Cauchy</i> o de <i>punto pendiente</i>. Este método predice un nuevo valor de <i>y</i> usando la pendiente
+						(igual a la primera derivada en el valor original de <i>x</i>) para extrapolar linealmente sobre el tamaño de paso <i>h</i>. <br/>Este método y los 
+						siguientes requieren de una condición inicial (<i>x<sub>i</sub></i> <i>y<sub>i</sub></i>)
+					</p>
+					<br/>
+					<p><b>Parámetros requeridos para utilizar el método de Euler:</b></p>
+					<br/>
+					<p><b>Ecuación: </b> La ecuación puede depender únicamente de x y <i>y</i></p>
+					<p><b><i>x<sub>i</sub></i>: </b> Valor inicial de x</p>
+					<p><b><i>y<sub>i</sub></i>: </b> Valor inicial de y</p>
+					<p><b>valor: </b> Valor de x para extrapolar</p>
+					<p><b>h: </b> Tamaño del paso. Este parámetro puede ser omitido si se proporciona una cantidad (n) de puntos</p>
+					<p><b>n: </b> Cantidad de puntos. Si ya se especificó un tamaño de paso, la cantidad de puntos será calculada automáticamente y puede omitirse.</p>
+				</div>
+				<div style="margin-top: 1rem;">
+					<h3>EDO's con método de Taylor</h3>
+					<p>En el método de Taylor para resolver Ecuaciones Diferenciales Ordinarias (EDO), se aproxima el resultado a <b>n</b> términos de la serie
+						de Taylor, para lo cual se ajusta la expresión del problema a la derivada correspondiente.
+					</p>
+					<br/>
+					<p><b>Parámetros requeridos para utilizar el método de Taylor:</b></p>
+					<br/>
+					<p><b>Ecuación: </b> La ecuación puede depender únicamente de x y <i>y</i></p>
+					<p><b><i>x<sub>i</sub></i>: </b> Valor inicial de x</p>
+					<p><b><i>y<sub>i</sub></i>: </b> Valor inicial de y</p>
+					<p><b>valor: </b> Valor de x para extrapolar</p>
+					<p><b>h: </b> Tamaño del paso. Este parámetro puede ser omitido si se proporciona una cantidad (n) de puntos</p>
+					<p><b>n: </b> Cantidad de puntos. Si ya se especificó un tamaño de paso, la cantidad de puntos será calculada automáticamente y puede omitirse.</p>
+					<p><b>Grado: </b> Se refiere al término en la serie de Taylor al que se se quiere aproximar. Por defecto se utiliza hasta el segundo término.</p>
+					<p><b>Nota importante: </b> Si lo que busca es una aproximación para una EDO de tipo polinómica (Ej. y' = y - x^2 + x + 1), las derivadas posteriores
+						(necesarias para el término n de la serie de Taylor) son calculadas automáticamente por el sistema. En cambio, si la EDO es de tipo trigonométrica
+						(Ej. y' = cos(x + y)) o da cabida a una ecuación diferencial del producto de dos variables (Ej. y' = 2*x*y), dejar al sistema calcularlas automáticamente
+						puede dar lugar a resultados erróneos. En su lugar, recomendamos encarecidamente al usuario que si la función pertenece a las mencionadas anteriormente, se deben proporcionar
+						manualmente las derivadas respectivas seleccionando la casilla "Ingresar EDO's manualmente". Esto asegura una respuesta correcta a la hora de aproximar resultados. 
+					</p>
+				</div>
+				<div style="margin-top: 1rem;">
+					<h3>Método de Runge Kutta</h3>
+					<p>Los método de Runge Kutta logran una exactitud del prcedimiento de la serie de Taylor sin requerir el cálculo de las derivadas superirores. Los métodos de Runge Kutta
+						de cualquier orden se deducen mediante el desarrollo de la serie de Taylor de la función <i>f(x, y)</i>.
+					</p>
+					<br/>
+					<p><b>Parámetros requeridos para utilizar el método de Runge Kutta:</b></p>
+					<br/>
+					<p><b>Ecuación: </b> La ecuación puede depender únicamente de x y <i>y</i></p>
+					<p><b><i>x<sub>i</sub></i>: </b> Valor inicial de x</p>
+					<p><b><i>y<sub>i</sub></i>: </b> Valor inicial de y</p>
+					<p><b>valor: </b> Valor de x para extrapolar</p>
+					<p><b>h: </b> Tamaño del paso. Este parámetro puede ser omitido si se proporciona una cantidad (n) de puntos</p>
+					<p><b>n: </b> Cantidad de puntos. Si ya se especificó un tamaño de paso, la cantidad de puntos será calculada automáticamente y puede omitirse.</p>
+					<p><b>Grado: </b> Entre 2 y 4. Se refiere al término n en la serie de Taylor</p>
+				</div>
 			</div>
 			<div class="info-container">
 				<h3>Listado de funciones</h3>
