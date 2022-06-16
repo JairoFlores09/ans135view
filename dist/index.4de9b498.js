@@ -625,8 +625,8 @@ parcelHelpers.export(exports, "requestData", ()=>requestData
 var _iconsSvg = require("../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 'use strict';
-const URL = 'https://ans135server.herokuapp.com/ues/';
-//const URL = 'http://127.0.0.1:8000/ues/';
+//const URL = 'https://ans135server.herokuapp.com/ues/';
+const URL = 'http://127.0.0.1:8000/ues/';
 const formContainer = document.querySelector('.form-container');
 const requestContainer = document.querySelector('.request-containter');
 const ggb_element = document.querySelector('#ggb-element');
@@ -1234,6 +1234,8 @@ const requestData = function(element) {
 								<input type='text' name='n' id='n' class='input'>
 								${name == 'Taylor' || name == 'RungeKutta' ? "<labe for='grade' class='label'>Grado: </label>" : ''}
 								${name == 'Taylor' || name == 'RungeKutta' ? "<input type='text' name='grade' id='grade' class='input'>" : ''}
+								${name == 'Adaptativo' ? "<label for='steps' class='label'>Pasos: </label>" : ""}
+								${name == 'Adaptativo' ? "<input type='text' name='steps' id='steps' class='input'>" : ""}
 							</div>
 						</div>
 						<button type='submit' id='btn_unit5' class='btn btn-submit'><i class="fa-solid fa-check"></i></button>
@@ -1308,6 +1310,17 @@ const requestData = function(element) {
                         'h': h,
                         'n': n,
                         'grade': grade
+                    };
+                } else if (name == 'Adaptativo') {
+                    let steps = document.querySelector("#steps").value;
+                    parametros = {
+                        'ecuation': ecuation,
+                        'xi': xi,
+                        'yi': yi,
+                        'value': value,
+                        'h': h,
+                        'n': n,
+                        'steps': steps
                     };
                 } else parametros = {
                     'ecuation': ecuation,
