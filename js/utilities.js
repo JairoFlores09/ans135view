@@ -181,7 +181,6 @@ export const requestData = function(element){
 				let cifras = document.querySelector("#cifras");
 				let allParams = document.querySelectorAll("#params");
 				document.querySelector("#btn_unit2").addEventListener('click', (e)=>{
-					console.log(`${URL}unidad${id}/${name.toLowerCase()}/`);
 					e.preventDefault();
 					clear();
 					renderSpinner();
@@ -191,6 +190,7 @@ export const requestData = function(element){
 						//El metodo de bairstow no requiere que los parametros viajen ordenados
 						params = params.sort(function(a,b){return a - b});
 					}
+
 					let result = get_data(`${URL}unidad${id}/${name.toLowerCase()}/`,
 						{
 							'funcion': funct.value,

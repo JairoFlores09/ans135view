@@ -625,8 +625,8 @@ parcelHelpers.export(exports, "requestData", ()=>requestData
 var _iconsSvg = require("../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 'use strict';
-//const URL = 'https://ans135server.herokuapp.com/ues/';
-const URL = 'http://127.0.0.1:8000/ues/';
+const URL = 'https://ans135server.herokuapp.com/ues/';
+//const URL = 'http://127.0.0.1:8000/ues/';
 const formContainer = document.querySelector('.form-container');
 const requestContainer = document.querySelector('.request-containter');
 const ggb_element = document.querySelector('#ggb-element');
@@ -791,7 +791,6 @@ const requestData = function(element) {
                 let cifras = document.querySelector("#cifras");
                 let allParams = document.querySelectorAll("#params");
                 document.querySelector("#btn_unit2").addEventListener('click', (e)=>{
-                    console.log(`${URL}unidad${id}/${name.toLowerCase()}/`);
                     e.preventDefault();
                     clear();
                     renderSpinner();
