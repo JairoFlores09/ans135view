@@ -1,1 +1,350 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet"><link rel="icon shorcut" href="/favicon.19bb58ac.jpeg" type="image/x-icon"><link rel="stylesheet" type="text/css" href="/index.6a10fb8d.css"><link rel="stylesheet" type="text/css" href="/index.42582da1.css"><title>Más información</title></head><body> <header class="header"> <ul class="header__list"> <li class="header__item"><a href="/index.html">Inicio</a></li> <li class="header__item"><a href="/integrantes.html">Integrantes</a></li> <li class="header__item"><a href="/info.html">Más información</a></li> <li class="header__item"><a href="https://github.com/Jeanetth/trabajo_Final/tree/main/ApiRest/ans135rest/metodos" target="_blank"><i class="fa-brands fa-github"></i> Github</a></li> </ul> </header> <section class="about-container"> <div class="about"> <h1>Guía de uso - Métodos Numéricos</h1> <div class="info-container"> <h3>Unidad 1 - Aproximaciones con Series de Taylor</h3> <p>La unidad 1 provee métodos numéricos que calculan las <a target="_blank" href="https://es.wikipedia.org/wiki/Serie_de_Taylor">Series de Taylor</a> para las siguientes funciones:</p> <ul> <li> - sin (x)</li> <li> - cos (x)</li> <li> - sinh (x)</li> <li> - cosh (x)</li> <li> - sin<sup>-1</sup> (x)</li> <li> - tg<sup>-1</sup> (x)</li> <li> - ln (1 + x)</li> <li> - 1 / 1 - x</li> </ul> <br> <b>Parámetros:</b> <p>Se muestra un formulario con los siguientes parámetros:</p> <br> <p><b>Valor o Punto</b> - Puede ser un valor entero o decimal y representa el valor o punto en el que se evaluará la función. Algunas aproximaciones con Series de Taylor sólo son válidas dentro de un intervalo que va desde -1 a 1</p> <br> <p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p> </div>  <div class="info-container"> <h3>Unidad 2 - Cálculo de raices</h3> <p>La unidad 2 proporciona métodos cerrados y métodos abiertos para las aproximaciones de raices. Estos son:</p> <ul> <li> - Método Gráfico</li> <li> - Método de Bisección</li> <li> - Método de Falsa Posición</li> <li> - Método de Punto Fijo</li> <li> - Método de Newton-Raphson</li> <li> - Método de la Secante</li> <li> - Método de Bairstow</li> <li> - Método de Muller</li> </ul> <br>  <div style="margin-bottom:1rem"> <p><b>* Método Gráfico:</b> Un método simple para obtener una aproximación a la raíz de la ecuación <i>f(x)</i> = 0 consiste en graficar la función y observar dónde cruza el eje x. Este punto, que representa el valor de x para el cual <i>f(x)</i> = 0, ofrece una aproximación inicial de la raíz. Se hace uso de la aplicación de Geogebra para este propósito.</p> </div> <br>  <div style="margin-bottom:1rem"> <p><b>* Método de Bisección:</b> Conocida también como corte binario, de partición de intervalos o de Bolzano, es un tipo de búsqueda incremental en el que el intervalo se divide siempre a la mitad. Si la función cambia de signo sobre un intervalo, se evalúa el valor de la función en el punto medio. La posición de la raíz se determina situandose en el punto medio del subintervalo, dentro del cual ocurre un cambio de signo. El proceso se repite hasta tener una mejor aproximación.</p> <b>Parámetros:</b> <p>Se muestra un formulario con los siguientes parámetros:</p> <br> <p><b>Función Objetivo:</b> <i>Ej: </i>sin(x) - x. Pedes consultar el listado de funciones al final de este documento.</p> <br> <p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p> <br> <p><b>x<sub>0</sub>: </b>Límite inferior del intervalo</p> <br> <p><b>x<sub>1</sub>: </b>Límite superior del intervalo</p> <i>Nota: Asegurate de que la función cruce el eje x dentro de este intervalo</i> </div> <br>  <div style="margin-bottom:1rem"> <p><b>* Método de Falsa Posición:</b> Este método consite en unir <i>f( x<sub>l</sub> )</i> y <i>f( x<sub>u</sub> )</i> con una línea recta. La intersección de esta línea con el eje x representa una mejor aproximación de la raíz. El hecho de que se reemplace la curva por una línea recta da una "falsa posición" de la raíz; de aquí el nombre de <i>método de falsa posición</i></p> <b>Parámetros:</b> <p>Se muestra un formulario con los siguientes parámetros:</p> <br> <p><b>Función Objetivo:</b> <i>Ej: </i>sin(x) - x. Pedes consultar el listado de funciones al final de este documento.</p> <br> <p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p> <br> <p><b>x<sub>l</sub>: </b>Límite inferior del intervalo</p> <br> <p><b>x<sub>u</sub>: </b>Límite superior del intervalo</p> <i>Nota: Asegurate de que la función cruce el eje x dentro de este intervalo</i> </div> <br>  <div style="margin-bottom:1rem"> <p><b>* Método de Punto Fijo:</b> Es un método abierto que emplea una fórmula para predecir la raíz a partir de un valor inicial, al arreglar la ecuación <i>f(x)</i> = 0 de tal modo que <i>x</i> esté del lado izquierdo de la ecuación:<br><i>x = g(x)</i><br>proporciona una fórmula para predecir un nuevo valor de x en función del valor anterior. De esta manera, dado un valor inicial para la raíz x<sub>i</sub>, se puede utilizar para obtener una nueva aproximación x<sub>i + 1</sub>.</p> <b>Parámetros:</b> <p>Se muestra un formulario con los siguientes parámetros:</p> <br> <p><b>Función Objetivo:</b> <i>Ej: </i>sin(x) + x. Pedes consultar el listado de funciones al final de este documento.</p> <br> <p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p> <br> <p><b>x<sub>0</sub> : </b>Punto inicial</p> <i>Nota: Se debe notar que la iteración de punto fijo converge si, en la región de interés, |g'(x)| < 1. En otras palabras la convergencia ocurre si la magnitud de la pendiente de g(x) es menor que la pendiente de la recta f(x) = x.</i> </div> <br>  <div style="margin-bottom:1rem"> <p><b>* Método de Newton-Raphson:</b> Tal vez, de las fórmulas para localizar raíces, la fórmula de Newton-Raphson sea la más ampliamente utilizada. Si el valor inicial para la raíz es x<sub>i</sub>, entonces se puede trazar una tangente desde el punto [x<sub>i</sub>,<i>f(x<sub>i</sub>)</i>]. Por lo común, el punto donde ésta tangente cruza el eje x representa una aproximación mejorada de la raíz.</p> <b>Parámetros:</b> <p>Se muestra un formulario con los siguientes parámetros:</p> <br> <p><b>Función Objetivo:</b> <i>Ej: </i>(x^2)cos(x) - 6xln(x) - 25. Pedes consultar el listado de funciones al final de este documento.</p> <br> <p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p> <br> <p><b>x<sub>i</sub> : </b>Punto inicial</p> </div>  <div style="margin-bottom:1rem"> <p><b>* Método de la Secante:</b> Método alternativo al método de Newton-Rapshon. Un problema potencial en la implementación del método de Newton-Raphson es la evaluación de la derivada. Aunque esto no es un inconveniente para los polinomios ni para muchas otras funciones, existen algunas funciones cuyas derivadas en ocasiones resultan muy difíciles de calcular. En dichos casos, la derivada se puede aproximar mediante una diferencia finita dividida hacia atrás. El método requiere dos valores iniciales de x. Sin embargo, debido a que <b>no se necesita que <i>f(x)</i> cambie de signo entre los valore dados</b>,este método no se clasifica como un método cerrado.</p> <b>Parámetros:</b> <p>Se muestra un formulario con los siguientes parámetros:</p> <br> <p><b>Función Objetivo:</b> <i>Ej: </i>e<sup>-x</sup> - ln(x). Pedes consultar el listado de funciones al final de este documento.</p> <br> <p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p> <br> <p><b>x<sub>0</sub> : </b>límite inferior del intervalo</p> <p><b>x<sub>1</sub> : </b>límite superior del intervalo</p> </div>  <div style="margin-bottom:1rem"> <p><b>* Método de Bairstow:</b> El método de Bairstow es un algoritmo eficiente de búsqueda de las raíces de un polinomio real de grado arbitrario. Es un método iterativo basado en el método de Newton-Raphson y Muller. Dado un polinomio <i>f<sub>n</sub> (x)</i> se encuentran dos factores, un polinomio cuadrático <i>f<sub>2</sub> (x) = x<sup> 2</sup> - rx - s</i> y <i>f<sub>n-2</sub> (x)</i><br>El procedimiento para el método de Bairstow es el siguiente. Dado:<br><i>f<sub>n</sub> (x)</i>, r<sub> 0</sub> y s<sub> 0</sub><br> 1. Utilizando el método de Newton-Raphson se calcula: <br> <i>f<sub>2</sub> (x) = x<sup> 2</sup> - rx - s</i> y <i>f<sub>n-2</sub> (x)</i>, tal que el residuo de <i>f<sub>n</sub> (x)</i>/<i>f<sub>2</sub> (x)</i>, sea igual a cero.<br> 2. Se determinan las raíces <i>f<sub>2</sub> (x)</i>, utilizando la fórmula general.<br> 3. Se calcula <i>f<sub>n-2</sub> (x)</i> = <i>f<sub>n</sub> (x)</i>/<i>f<sub>2</sub> (x)</i><br> 4. Se hace <i>f<sub>n</sub> (x)</i> := <i>f<sub>n-2</sub> (x)</i><br> 5. Si el grado del polinomio es mayor que tres regresamos al paso 2; en caso contrario, termina la operación.<br> La principal diferencia de este método, respecto a otros, es que permite calcular todas las raices de un polinomio (reales e imaginarias). </p> <b>Parámetros:</b> <p>Se muestra un formulario con los siguientes parámetros:</p> <br> <p><b>Función Objetivo:</b> <i>Ej: </i><i>x<sup> 7</sup> - x<sup> 5</sup> + 8x<sup> 4</sup> - 8x<sup> 3</sup> - x<sup> 2</sup> + x - 9 = 0</i>. Pedes consultar el listado de funciones al final de este documento.</p> <br> <p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p> <br> <p><b>r<sub> 0</sub> : </b>coeficiente del factor x<sup> 1</sup></p> <p><b>s<sub> 0</sub> : </b>valor del término independiente</p> </div>  <div style="margin-bottom:1rem"> <p><b>* Método de Muller:</b> Similar al método de la Secante que se aproxima a la raíz dirigiendo un línea recta hasta el eje x con dos valores de la función. El método de Muller lo hace construyendo un aparábola con tres puntos.<br> El método consiste en obtener los coeficientes de la parábola que pasa por los tres puntos. Dichos coeficientes se sustituyen en la fórmula cuadrática para obtener el valor donde la parábola intersecta al eje x; es decir, la raíz estimada. </p> <b>Parámetros:</b> <p>Se muestra un formulario con los siguientes parámetros:</p> <br> <p><b>Función Objetivo:</b> <i>Ej: </i><i>x<sup> 3</sup> - 13x - 12</i>. Pedes consultar el listado de funciones al final de este documento.</p> <br> <p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p> <br> <p><b>x<sub>0</sub> : </b>punto 1</p> <p><b>x<sub>1</sub> : </b>punto 2</p> <p><b>x<sub>2</sub> : </b>punto 3</p> </div> </div>  <div class="info-container"> <h3>Unidad 3 - Interpolaciones</h3> <p>En la ingeniería con frecuencia se econtrará con que tiene que estimar valores intermedios entre puntos asociados con datos. El método más común que se usa para este propósito es la interpolación polinomial. Dados <b><i>n + 1 </i></b> puntos asociados con datos, hay uno y sólo un plinomio de grado <b><i>n </i></b> que pasa a través de todos los puntos. Por ejemplo, hay sólo una línea recta (es decir, un polinomio de primer grado) que une dos puntos. De manera similar, únicamente una parábola une un conjunto de tres puntos. La interpolación polinomial consiste en determinar el polinomio único de <b><i>n-ésimo </i></b> grado que se ajuste a <b><i>n + 1 </i></b> puntos asociados con datos. Este polinomio, entonces, proporciona una fórmula para calcular valores intermedios. Aunque hay un sólo polinomio de <b><i>n-ésimo </i></b> grado que se ajusta a <b><i>n + 1 </i></b> puntos, existe una gran variedad de formas matemáticas en las cuales puede expresarse este polinomio. En esta sección encontrará alternativas que son muy adecuadas para encontrar estos polinomios. </p><div style="margin-bottom:1rem"> <p><b>Los siguientes parámetros aplican para cualquier método numérico de esta unidad:</b></p> <br> <p><b>Polinomio: </b> <i>Ej: </i><i>x<sup> 2</sup> - 5x + 4</i>. Pedes consultar el listado de funciones al final de este documento.</p> <br> <p><b>Interpolar: </b> Valor intermedio a estimar</p> <br> <p><b>x: </b>Serie de valores para x. El mínimo de puntos que se pueden ingresar son dos puntos (puede agregar más puntos si lo desea presionando el botón con signo "+").</p> <br> <p><i>En ocasiones se tiene una tabla de valores discretos generados a partir de una proceso experimental para los cuales es necesario realizar una interpolación, si ese es el caso, marque la casilla "Ingresar los datos en una tabla" y automáticamente se habilitará una segunda fila para ingresar los valores correspondientes asociados a cada punto de x </i></p> </div> <p></p> </div>  <div class="info-container"> <h3>Unidad 4 - Diferenciación e Integración numéricas</h3> <p>El cálculo es la matemática del cambio. Como los ingenieros deben tratar en forma continua con sistemas y procesos que cambian, el cálculo es una herramienta esencial en nuestra profesión. En la esencia del cálculo están dos conceptos matemáticos relacionados: la difrenciación y la integración.<br> De acuerdo a la definición del diccionario, <i>diferenciar </i> significa "marcar por diferencias; distinguir;... percibir la direncia en o entre". En el contexto de las matemáticas, la derivada sirve como el principal vehículo para la diferenciación, representa la razón de cambio de una variable dependiente con respecto a una variable independiente. <br> En cálculo, el proceso inverso de la diferenciación es la integración. De acuerdo con la definición del diccionario, <i>integrar </i> significa "juntar partes en un todo; unir; indicar la cantidad total ..." <br> Debido a esa estrecha relación, esta sección incluye ambos porcesos utilizando difentes métodos de los cuales el usuario puede hacer uso. <br> Los métodos numéricos presentados en esta unidad son especialmente útiles para obtener aproximaciones a integrales que son sumamente complicadas o imposibles de resolver de forma analítica. Tanto la diferenciación como la integración cuentan con un método adaptativo mejorado que proporciona aproximaciones más precisas; El método adaptativo de la diferenciación numérica es la Extrapolación de Richardson, así como la Integración por el método de Rosemberg lo es para la integración. </p> <div style="margin-top:1rem"> <h3>Derivación Numérica</h3> <p>En la derivación numérica contamos con diferentes métodos para la diferenciación: Hacia adelante, Hacia atrás, Diferencias centradas, Diferenciación con tres y cinco puntos. Estas opciones están disponibles para la selección del usuario, además de poder especificar el orden de la derivada que se desea calcular, ya sea, la primer derivada, segunda, tercera o cuarta derivada. Algunos métodos tienen dos modos de aproximación (en la mayoría de las ocasiones el modo de segunda diferencia resulta ser más preciso que el modo de primer diferencia), se deja a libertad del usuario experimentar para determinar que modo le brinda una mejor aproximación. </p> <p><b>Es responsabilidad del usuario proporcionar la siguiente información:</b></p> <p> - <b>Función objetivo o Tabla de datos: </b> Una anula a la otra, es decir, si se ingresa una función, se omite la tabla de datos y biseversa.</p> <p> - <b>Tamaño de espaciado: </b> Representado con el parámetro "h"</p> <p> - <b>Valor objetivo: </b> Valor en el que será evaluada la derivada obtenida</p> <p> Para el método de Extrapolación de Richardson se agrega un nuevo parámetro:</p> <p> - <b>Nivel: </b> El método de Richardson está basado en el método de diferencias divididas de Newton. Mientras mayor sea el nivel, se obtiene una mejor aproximación al valor real pero requiere mayor tiempo de procesamiento.<br> <i>Es posible omitir este campo y el sistema usará por defecto 2 niveles de diferencia</i> </p> <p><i>Se elimina la posibilidad de ingresar los datos por medio de una tabla</i></p> </div> <div style="margin-top:1rem"> <h3>Integración Numérica</h3> <p>Al igual que en la Derivación Numérica, en la integración contamos con diferentes métodos: Trapecio Compuesto, Simpson 1/3 y Simpson 3/8. Unos proporcionan mejores aproximaciones que otros, lo dejamos a libertad del usuario elegir el que mejor se acerque al valor deseado. </p> <p><b>El usuario debe proporcionar la siguiente información:</b></p> <p> - <b>Función objetivo o Tabla de datos:</b> Una anula a la otra, es decir, si se ingresa una función, se omite la tabla de datos y biseversa.</p> <p> - <b>Límites de integración: </b> Se requiere un límite inferior (a) y un límite superior (b) para una integral definida</p> <p> - <b>Cantidad de Subintervalos: </b> Este parámetro es requerido en caso de ingresar una función, en su lugar, si se ingresa una tabla de datos, este parámetro es inferido y puede omitirse. Si se proporciona una tabla de datos y además un valor de subintervalo, este será ignorado por el sistema. </p> <p><i><b>Importante para su consideración:</b></i><br> Los método de Simpson 1/3 y 3/8 tienen restricciones en la cantidad de subintervalos necesarios para funcionar. Estas restricciones son importantes de considerar cuando ingresa una tabla de datos ya que el método de Simpson 1/3 requiere que la cantidad de subintervalos sea par, mientras que Simpson 3/8 requiere una cantidad de subintervalos múltiplo de tres <br> Si no se respetan estas restricciones recibirá un error y no se realizarán los cálculos hasta que ingrese parámetros válidos. </p> <p> Para el método de Rosemberg se agrega un nuevo parámetro:</p> <p> - <b>Nivel: </b> El método de Rosemberg también está basado en el método de diferencias divididas de Newton. Mientras mayor sea el nivel, se obtiene una mejor aproximación al valor real pero requiere mayor tiempo de procesamiento.<br> <i>Es posible omitir este campo y el sistema usará por defecto 2 niveles de diferencia</i> </p> <p><i>Se elimina la posibilidad de ingresar los datos por medio de una tabla</i></p> </div> </div>  <div class="info-container"> <h3>Unidad 5 - Ecuaciones Diferenciales Ordinarias (EDO's)</h3> <p>Las leyes fundamentales de la física: la mecánica, la electricidad y la termodinámica con frecuencia se basan en observaciones empíricas que explican las variaciones de los sistemas. Más que en describir directamente el estado de los sistemas físicos, las leyes a menudo se expresan en términos de los cambios del espacio y del tiempo. Cuando una función tiene una variable independiente, la ecuación se llama <i>ecuación diferencial ordinaria (o EDO).</i> Muchas de las ecuaciones diferenciales de importancia práctica no se pueden resolver utilizando los métodos analíticos de cálculo. Así los métodos que se encuentran en esta unidad resultan extremadamente importantes en todos los campos de la ingeniería. </p> <div style="margin-top:1rem"> <h3>Método de Euler para solución de EDO's</h3> <p>También conocido como <i>Euler-Cauchy</i> o de <i>punto pendiente</i>. Este método predice un nuevo valor de <i>y</i> usando la pendiente (igual a la primera derivada en el valor original de <i>x</i>) para extrapolar linealmente sobre el tamaño de paso <i>h</i>. <br>Este método y los siguientes requieren de una condición inicial (<i>x<sub>i</sub></i> <i>y<sub>i</sub></i>) </p> <br> <p><b>Parámetros requeridos para utilizar el método de Euler:</b></p> <br> <p><b>Ecuación: </b> La ecuación puede depender únicamente de x y <i>y</i></p> <p><b><i>x<sub>i</sub></i>: </b> Valor inicial de x</p> <p><b><i>y<sub>i</sub></i>: </b> Valor inicial de y</p> <p><b>valor: </b> Valor de x para extrapolar</p> <p><b>h: </b> Tamaño del paso. Este parámetro puede ser omitido si se proporciona una cantidad (n) de puntos</p> <p><b>n: </b> Cantidad de puntos. Si ya se especificó un tamaño de paso, la cantidad de puntos será calculada automáticamente y puede omitirse.</p> </div> <div style="margin-top:1rem"> <h3>EDO's con método de Taylor</h3> <p>En el método de Taylor para resolver Ecuaciones Diferenciales Ordinarias (EDO), se aproxima el resultado a <b>n</b> términos de la serie de Taylor, para lo cual se ajusta la expresión del problema a la derivada correspondiente. </p> <br> <p><b>Parámetros requeridos para utilizar el método de Taylor:</b></p> <br> <p><b>Ecuación: </b> La ecuación puede depender únicamente de x y <i>y</i></p> <p><b><i>x<sub>i</sub></i>: </b> Valor inicial de x</p> <p><b><i>y<sub>i</sub></i>: </b> Valor inicial de y</p> <p><b>valor: </b> Valor de x para extrapolar</p> <p><b>h: </b> Tamaño del paso. Este parámetro puede ser omitido si se proporciona una cantidad (n) de puntos</p> <p><b>n: </b> Cantidad de puntos. Si ya se especificó un tamaño de paso, la cantidad de puntos será calculada automáticamente y puede omitirse.</p> <p><b>Grado: </b> Se refiere al término en la serie de Taylor al que se se quiere aproximar. Por defecto se utiliza hasta el segundo término.</p> <p><b>Nota importante: </b> Si lo que busca es una aproximación para una EDO de tipo polinómica (Ej. y' = y - x^2 + x + 1), las derivadas posteriores (necesarias para el término n de la serie de Taylor) son calculadas automáticamente por el sistema. En cambio, si la EDO es de tipo trigonométrica (Ej. y' = cos(x + y)) o da cabida a una ecuación diferencial del producto de dos variables (Ej. y' = 2*x*y), dejar al sistema calcularlas automáticamente puede dar lugar a resultados erróneos. En su lugar, recomendamos encarecidamente al usuario que si la función pertenece a las mencionadas anteriormente, se deben proporcionar manualmente las derivadas respectivas seleccionando la casilla "Ingresar EDO's manualmente". Esto asegura una respuesta correcta a la hora de aproximar resultados. </p> </div> <div style="margin-top:1rem"> <h3>Método de Runge Kutta</h3> <p>Los método de Runge Kutta logran una exactitud del prcedimiento de la serie de Taylor sin requerir el cálculo de las derivadas superirores. Los métodos de Runge Kutta de cualquier orden se deducen mediante el desarrollo de la serie de Taylor de la función <i>f(x, y)</i>. </p> <br> <p><b>Parámetros requeridos para utilizar el método de Runge Kutta:</b></p> <br> <p><b>Ecuación: </b> La ecuación puede depender únicamente de x y <i>y</i></p> <p><b><i>x<sub>i</sub></i>: </b> Valor inicial de x</p> <p><b><i>y<sub>i</sub></i>: </b> Valor inicial de y</p> <p><b>valor: </b> Valor de x para extrapolar</p> <p><b>h: </b> Tamaño del paso. Este parámetro puede ser omitido si se proporciona una cantidad (n) de puntos</p> <p><b>n: </b> Cantidad de puntos. Si ya se especificó un tamaño de paso, la cantidad de puntos será calculada automáticamente y puede omitirse.</p> <p><b>Grado: </b> Entre 2 y 4. Se refiere al término n en la serie de Taylor</p> </div> </div> <div class="info-container"> <h3>Listado de funciones</h3> <h4>&nbsp;&nbsp;Funciones Trigonométricas:</h4> <ul> <li>&nbsp;&nbsp;sin(x) - Función seno</li> <li>&nbsp;&nbsp;cos(x) - Función coseno</li> <li>&nbsp;&nbsp;tan(x) - Función tangente</li> <li>&nbsp;&nbsp;asin(x) - Función arcoseno</li> <li>&nbsp;&nbsp;acos(x) - Función arcocoseno</li> <li>&nbsp;&nbsp;atan(x) - Función arcotangente</li> <li>&nbsp;&nbsp;csc(x) - Función cosecante</li> <li>&nbsp;&nbsp;sec(x) - Función secante</li> <li>&nbsp;&nbsp;cot(x) - Función cotangente</li> </ul> <h4>&nbsp;&nbsp;Logaritmos:</h4> <ul> <li>&nbsp;&nbsp;ln(x) - Logaritmo natural o logaritmo base <i>e</i></li> <li>&nbsp;&nbsp;log(x,b) - logaritmo base b de x</li> </ul> <h4>&nbsp;&nbsp;Potencias y Constantes:</h4> <ul> <li>&nbsp;&nbsp;pi - Valor de la constante π (pi)</li> <li>&nbsp;&nbsp;exp(x) - Función exponencial <i>e<sup> x</sup></i></li> <li>&nbsp;&nbsp;^ - Simbolo de potencia. x^2 = <i>x<sup> 2</sup></i></li> <li>&nbsp;&nbsp;sqrt(x) - Raíz cuadrada</li> </ul> </div> </div> </section> </body></html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="shorcut icon" href="/favicon.1ac1544e.jpeg" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="/index.621e0181.css">
+	<link rel="stylesheet" type="text/css" href="/index.b2625c6b.css">
+	<title>Más información</title>
+</head>
+<body>
+	<header class="header">
+		<ul class="header__list">
+			<li class="header__item"><a href="/index.html">Inicio</a></li>
+			<li class="header__item"><a href="/integrantes.html">Integrantes</a></li>
+			<li class="header__item"><a href="/info.html">Más información</a></li>
+			<li class="header__item"><a href="https://github.com/Jeanetth/trabajo_Final/tree/main/ApiRest/ans135rest/metodos" target="_blank"><i class="fa-brands fa-github"></i> Github</a></li>
+		</ul>
+	</header>
+	<section class="about-container">
+		<div class="about">
+			<h1>Guía de uso - Métodos Numéricos</h1>
+			<div class="info-container">
+				<h3>Unidad 1 - Aproximaciones con Series de Taylor</h3>
+				<p>La unidad 1 provee métodos numéricos que calculan las <a target="_blank" href="https://es.wikipedia.org/wiki/Serie_de_Taylor">Series de Taylor</a> para las siguientes funciones:</p>
+				<ul>
+					<li> - sin (x)</li>
+					<li> - cos (x)</li>
+					<li> - sinh (x)</li>
+					<li> - cosh (x)</li>
+					<li> - sin<sup>-1</sup> (x)</li>
+					<li> - tg<sup>-1</sup> (x)</li>
+					<li> - ln (1 + x)</li>
+					<li> - 1 / 1 - x</li>
+				</ul>
+				<br>
+				<b>Parámetros:</b>
+				<p>Se muestra un formulario con los siguientes parámetros:</p>
+				<br>
+				<p><b>Valor o Punto</b> - Puede ser un valor entero o decimal y representa el valor o punto en el que se evaluará la función. Algunas aproximaciones con Series de Taylor sólo son válidas dentro de un intervalo que va desde -1 a 1</p>
+				<br>
+				<p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p>
+				</div>
+				<!-- UNIDAD 2 -->
+			<div class="info-container">
+				<h3>Unidad 2 - Cálculo de raices</h3>
+				<p>La unidad 2 proporciona métodos cerrados y métodos abiertos para las aproximaciones de raices. Estos son:</p>
+				<ul>
+					<li> - Método Gráfico</li>
+					<li> - Método de Bisección</li>
+					<li> - Método de Falsa Posición</li>
+					<li> - Método de Punto Fijo</li>
+					<li> - Método de Newton-Raphson</li>
+					<li> - Método de la Secante</li>
+					<li> - Método de Bairstow</li>
+					<li> - Método de Muller</li>
+				</ul>
+				<br>
+				<!-- MÉTODO GRÁFICO -->
+				<div style="margin-bottom: 1rem">
+					<p><b>* Método Gráfico:</b> Un método simple para obtener una aproximación a la raíz de la ecuación <i>f(x)</i> = 0 consiste en graficar la función y observar dónde cruza el eje x. Este punto, que representa el valor de x para el cual <i>f(x)</i> = 0, ofrece una aproximación inicial de la raíz. Se hace uso de la aplicación de Geogebra para este propósito.</p>
+				</div>
+				<br>
+				<!-- MÉTODO DE BISECCIÓN -->
+				<div style="margin-bottom: 1rem">
+					<p><b>* Método de Bisección:</b> Conocida también como corte binario, de partición de intervalos o de Bolzano, es un tipo de búsqueda incremental en el que el intervalo se divide siempre a la mitad. Si la función cambia de signo sobre un intervalo, se evalúa el valor de la función en el punto medio. La posición de la raíz se determina situandose en el punto medio del subintervalo, dentro del cual ocurre un cambio de signo. El proceso se repite hasta tener una mejor aproximación.</p>
+					<b>Parámetros:</b>
+					<p>Se muestra un formulario con los siguientes parámetros:</p>
+					<br>
+					<p><b>Función Objetivo:</b> <i>Ej: </i>sin(x) - x. Pedes consultar el listado de funciones al final de este documento.</p>
+					<br>
+					<p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p>
+					<br>
+					<p><b>x<sub>0</sub>: </b>Límite inferior del intervalo</p>
+					<br>
+					<p><b>x<sub>1</sub>: </b>Límite superior del intervalo</p>
+					<i>Nota: Asegurate de que la función cruce el eje x dentro de este intervalo</i>
+				</div>
+				<br>
+				<!-- MÉTODO DE FALSA POSICIÓN -->
+				<div style="margin-bottom: 1rem">
+					<p><b>* Método de Falsa Posición:</b> Este método consite en unir <i>f( x<sub>l</sub> )</i> y <i>f( x<sub>u</sub> )</i> con una línea recta. La intersección de esta línea con el eje x representa una mejor aproximación de la raíz. El hecho de que se reemplace la curva por una línea recta da una "falsa posición" de la raíz; de aquí el nombre de <i>método de falsa posición</i></p>
+					<b>Parámetros:</b>
+					<p>Se muestra un formulario con los siguientes parámetros:</p>
+					<br>
+					<p><b>Función Objetivo:</b> <i>Ej: </i>sin(x) - x. Pedes consultar el listado de funciones al final de este documento.</p>
+					<br>
+					<p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p>
+					<br>
+					<p><b>x<sub>l</sub>: </b>Límite inferior del intervalo</p>
+					<br>
+					<p><b>x<sub>u</sub>: </b>Límite superior del intervalo</p>
+					<i>Nota: Asegurate de que la función cruce el eje x dentro de este intervalo</i>
+				</div>
+				<br>
+				<!-- MÉTODO DE PUNTO FIJO -->
+				<div style="margin-bottom: 1rem">
+					<p><b>* Método de Punto Fijo:</b> Es un método abierto que emplea una fórmula para predecir la raíz a partir de un valor inicial, al arreglar la ecuación <i>f(x)</i> = 0 de tal modo que <i>x</i> esté del lado izquierdo de la ecuación:<br><i>x = g(x)</i><br>proporciona una fórmula para predecir un nuevo valor de x en función del valor anterior. De esta manera, dado un valor inicial para la raíz x<sub>i</sub>, se puede utilizar para obtener una nueva aproximación x<sub>i + 1</sub>.</p>
+					<b>Parámetros:</b>
+					<p>Se muestra un formulario con los siguientes parámetros:</p>
+					<br>
+					<p><b>Función Objetivo:</b> <i>Ej: </i>sin(x) + x. Pedes consultar el listado de funciones al final de este documento.</p>
+					<br>
+					<p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p>
+					<br>
+					<p><b>x<sub>0</sub> : </b>Punto inicial</p>
+					<i>Nota: Se debe notar que la iteración de punto fijo converge si, en la región de interés, |g'(x)| < 1. En otras palabras la convergencia ocurre si la magnitud de la pendiente de g(x) es menor que la pendiente de la recta f(x) = x.</i>
+				</div>
+				<br>
+				<!-- MÉTODO DE NEWTON-RAPHSON -->
+				<div style="margin-bottom: 1rem">
+					<p><b>* Método de Newton-Raphson:</b> Tal vez, de las fórmulas para localizar raíces, la fórmula de Newton-Raphson sea la más ampliamente utilizada. Si el valor inicial para la raíz es x<sub>i</sub>, entonces se puede trazar una tangente desde el punto [x<sub>i</sub>,<i>f(x<sub>i</sub>)</i>]. Por lo común, el punto donde ésta tangente cruza el eje x representa una aproximación mejorada de la raíz.</p>
+					<b>Parámetros:</b>
+					<p>Se muestra un formulario con los siguientes parámetros:</p>
+					<br>
+					<p><b>Función Objetivo:</b> <i>Ej: </i>(x^2)cos(x) - 6xln(x) - 25. Pedes consultar el listado de funciones al final de este documento.</p>
+					<br>
+					<p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p>
+					<br>
+					<p><b>x<sub>i</sub> : </b>Punto inicial</p>
+				</div>
+				<!-- MÉTODO DE LA SECANTE -->
+				<div style="margin-bottom: 1rem">
+					<p><b>* Método de la Secante:</b> Método alternativo al método de Newton-Rapshon. Un problema potencial en la implementación del método de Newton-Raphson es la evaluación de la derivada. Aunque esto no es un inconveniente para los polinomios ni para muchas otras funciones, existen algunas funciones cuyas derivadas en ocasiones resultan muy difíciles de calcular. En dichos casos, la derivada se puede aproximar mediante una diferencia finita dividida hacia atrás. El método requiere dos valores iniciales de x. Sin embargo, debido a que <b>no se necesita que <i>f(x)</i> cambie de signo entre los valore dados</b>,este método no se clasifica como un método cerrado.</p>
+					<b>Parámetros:</b>
+					<p>Se muestra un formulario con los siguientes parámetros:</p>
+					<br>
+					<p><b>Función Objetivo:</b> <i>Ej: </i>e<sup>-x</sup> - ln(x). Pedes consultar el listado de funciones al final de este documento.</p>
+					<br>
+					<p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p>
+					<br>
+					<p><b>x<sub>0</sub> : </b>límite inferior del intervalo</p>
+					<p><b>x<sub>1</sub> : </b>límite superior del intervalo</p>
+				</div>
+				<!-- MÉTODO DE LA BAIRSTOW -->
+				<div style="margin-bottom: 1rem">
+					<p><b>* Método de Bairstow:</b> El método de Bairstow es un algoritmo eficiente de búsqueda de las raíces de un polinomio real de grado arbitrario. Es un método iterativo basado en el método de Newton-Raphson y Muller. Dado un polinomio <i>f<sub>n</sub> (x)</i> se encuentran dos factores, un polinomio cuadrático <i>f<sub>2</sub> (x) = x<sup> 2</sup> - rx - s</i> y <i>f<sub>n-2</sub> (x)</i><br>El procedimiento para el método de Bairstow es el siguiente. Dado:<br><i>f<sub>n</sub> (x)</i>, r<sub> 0</sub> y s<sub> 0</sub><br>
+						1. Utilizando el método de Newton-Raphson se calcula: <br>
+						<i>f<sub>2</sub> (x) = x<sup> 2</sup> - rx - s</i> y <i>f<sub>n-2</sub> (x)</i>, tal que el residuo  de <i>f<sub>n</sub> (x)</i>/<i>f<sub>2</sub> (x)</i>, sea igual a cero.<br>
+						2. Se determinan las raíces <i>f<sub>2</sub> (x)</i>, utilizando la fórmula general.<br>
+						3. Se calcula <i>f<sub>n-2</sub> (x)</i> = <i>f<sub>n</sub> (x)</i>/<i>f<sub>2</sub> (x)</i><br>
+						4. Se hace <i>f<sub>n</sub> (x)</i> := <i>f<sub>n-2</sub> (x)</i><br>
+						5. Si el grado del polinomio es mayor que tres regresamos al paso 2; en caso contrario, termina la operación.<br>
+						La principal diferencia de este método, respecto a otros, es que permite calcular todas las raices de un polinomio (reales e imaginarias).
+					</p>
+					<b>Parámetros:</b>
+					<p>Se muestra un formulario con los siguientes parámetros:</p>
+					<br>
+					<p><b>Función Objetivo:</b> <i>Ej: </i><i>x<sup> 7</sup> - x<sup> 5</sup> + 8x<sup> 4</sup> - 8x<sup> 3</sup> - x<sup> 2</sup> + x - 9 = 0</i>. Pedes consultar el listado de funciones al final de este documento.</p>
+					<br>
+					<p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p>
+					<br>
+					<p><b>r<sub> 0</sub> : </b>coeficiente del factor x<sup> 1</sup></p>
+					<p><b>s<sub> 0</sub> : </b>valor del término independiente</p>
+				</div>
+				<!-- MÉTODO DE MULLER -->
+				<div style="margin-bottom: 1rem">
+					<p><b>* Método de Muller:</b> Similar al método de la Secante que se aproxima a la raíz dirigiendo un línea recta hasta el eje x con dos valores de la función. El método de Muller lo hace construyendo un aparábola con tres puntos.<br>
+					El método consiste en obtener los coeficientes de la parábola que pasa por los tres puntos. Dichos coeficientes se sustituyen en la fórmula cuadrática para obtener el valor donde la parábola intersecta al eje x; es decir, la raíz estimada.
+					</p>
+					<b>Parámetros:</b>
+					<p>Se muestra un formulario con los siguientes parámetros:</p>
+					<br>
+					<p><b>Función Objetivo:</b> <i>Ej: </i><i>x<sup> 3</sup> - 13x - 12</i>. Pedes consultar el listado de funciones al final de este documento.</p>
+					<br>
+					<p><b>Cifras significativas</b> - Visita <a href="https://es.wikipedia.org/wiki/Cifras_significativas" target="_blank">cifras significativas</a> para mayor información</p>
+					<br>
+					<p><b>x<sub>0</sub> : </b>punto 1</p>
+					<p><b>x<sub>1</sub> : </b>punto 2</p>
+					<p><b>x<sub>2</sub> : </b>punto 3</p>
+				</div>
+			</div>
+			<!-- UNIDAD 3 -->
+			<div class="info-container">
+				<h3>Unidad 3 - Interpolaciones</h3>
+				<p>En la ingeniería con frecuencia se econtrará con que tiene que estimar valores intermedios entre puntos asociados con datos. El método más común que se usa para este propósito
+					es la interpolación polinomial. Dados <b><i>n + 1 </i></b> puntos asociados con datos, hay uno y sólo un plinomio de grado <b><i>n </i></b> que pasa a través de todos los puntos. Por ejemplo, hay
+					sólo una línea recta (es decir, un polinomio de primer grado) que une dos puntos. De manera similar, únicamente una parábola une un conjunto de tres puntos. La interpolación
+					polinomial consiste en determinar el polinomio único de <b><i>n-ésimo </i></b> grado que se ajuste a <b><i>n + 1 </i></b> puntos asociados con datos. Este polinomio, entonces, proporciona una fórmula
+					para calcular valores intermedios.
+					Aunque hay un sólo polinomio de <b><i>n-ésimo </i></b> grado que se ajusta a <b><i>n + 1 </i></b> puntos, existe una gran variedad de formas matemáticas en las cuales puede expresarse
+					este polinomio. En esta sección encontrará alternativas que son muy adecuadas para encontrar estos polinomios.
+
+					</p><div style="margin-bottom: 1rem">
+						<p><b>Los siguientes parámetros aplican para cualquier método numérico de esta unidad:</b></p>
+						<br>
+						<p><b>Polinomio: </b> <i>Ej: </i><i>x<sup> 2</sup> - 5x + 4</i>. Pedes consultar el listado de funciones al final de este documento.</p>
+						<br>
+						<p><b>Interpolar: </b> Valor intermedio a estimar</p>
+						<br>
+						<p><b>x: </b>Serie de valores para x. El mínimo de puntos que se pueden ingresar son dos puntos (puede agregar más puntos si lo desea presionando el botón con signo "+").</p>
+						<br>
+						<p><i>En ocasiones se tiene una tabla de valores discretos generados a partir de una proceso experimental para los cuales es necesario realizar una interpolación, si ese es el caso, marque la casilla 
+							"Ingresar los datos en una tabla" y automáticamente se habilitará una segunda fila para ingresar los valores correspondientes asociados a cada punto de x
+						</i></p>
+					</div>
+				<p></p>
+			</div>
+			<!-- UNIDAD 4 -->
+			<div class="info-container">
+				<h3>Unidad 4 - Diferenciación e Integración numéricas</h3>
+				<p>El cálculo es la matemática del cambio. Como los ingenieros deben tratar en forma continua con sistemas y procesos que cambian, el cálculo es una herramienta esencial
+					en nuestra profesión. En la esencia del cálculo están dos conceptos matemáticos relacionados: la difrenciación y la integración.<br>
+					De acuerdo a la definición del diccionario, <i>diferenciar </i> significa "marcar por diferencias; distinguir;... percibir la direncia en o entre".
+					En el contexto de las matemáticas, la derivada sirve como el principal vehículo para la diferenciación, representa la razón de cambio de una variable dependiente
+					con respecto a una variable independiente. <br>
+					En cálculo, el proceso inverso de la diferenciación es la integración. De acuerdo con la definición del diccionario, <i>integrar </i> significa "juntar partes en un todo; unir; indicar la cantidad total ..." <br>
+					Debido a esa estrecha relación, esta sección incluye ambos porcesos utilizando difentes métodos de los cuales el usuario puede hacer uso. <br>
+					Los métodos numéricos presentados en esta unidad son especialmente útiles para obtener aproximaciones a integrales que son sumamente complicadas o imposibles de resolver de forma analítica. Tanto
+					la diferenciación como la integración cuentan con un método adaptativo mejorado que proporciona aproximaciones más precisas; El método adaptativo de la diferenciación
+					numérica es la Extrapolación de Richardson, así como la Integración por el método de Rosemberg lo es para la integración.
+				</p>
+				<div style="margin-top: 1rem">
+					<h3>Derivación Numérica</h3>
+					<p>En la derivación numérica contamos con diferentes métodos para la diferenciación: Hacia adelante, Hacia atrás, Diferencias centradas, Diferenciación con tres y cinco puntos.
+						Estas opciones están disponibles para la selección del usuario, además de poder especificar el orden de la derivada que se desea calcular, ya sea, la primer derivada, segunda,
+						tercera o cuarta derivada. Algunos métodos tienen dos modos de aproximación (en la mayoría de las ocasiones el modo de segunda diferencia resulta ser más preciso que el modo de primer diferencia),
+						se deja a libertad del usuario experimentar para determinar que modo le brinda una mejor aproximación.
+					</p>
+					<p><b>Es responsabilidad del usuario proporcionar la siguiente información:</b></p>
+					<p> - <b>Función objetivo o Tabla de datos: </b> Una anula a la otra, es decir, si se ingresa una función, se omite la tabla de datos y biseversa.</p>
+					<p> - <b>Tamaño de espaciado: </b> Representado con el parámetro "h"</p>
+					<p> - <b>Valor objetivo: </b> Valor en el que será evaluada la derivada obtenida</p>
+					<p> Para el método de Extrapolación de Richardson se agrega un nuevo parámetro:</p>
+					<p> - <b>Nivel: </b> El método de Richardson está basado en el método de diferencias divididas de Newton. Mientras mayor sea el nivel, se obtiene una mejor aproximación al valor real pero requiere mayor tiempo de procesamiento.<br>
+						<i>Es posible omitir este campo y el sistema usará por defecto 2 niveles de diferencia</i>
+					</p>
+					<p><i>Se elimina la posibilidad de ingresar los datos por medio de una tabla</i></p>
+				</div>
+				<div style="margin-top: 1rem">
+					<h3>Integración Numérica</h3>
+					<p>Al igual que en la Derivación Numérica, en la integración contamos con diferentes métodos: Trapecio Compuesto, Simpson 1/3 y Simpson 3/8. Unos proporcionan mejores aproximaciones que otros,
+						lo dejamos a libertad del usuario elegir el que mejor se acerque al valor deseado.
+					</p>
+					<p><b>El usuario debe proporcionar la siguiente información:</b></p>
+					<p> - <b>Función objetivo o Tabla de datos:</b>  Una anula a la otra, es decir, si se ingresa una función, se omite la tabla de datos y biseversa.</p>
+					<p> - <b>Límites de integración: </b> Se requiere un límite inferior (a) y un límite superior (b) para una integral definida</p>
+					<p> - <b>Cantidad de Subintervalos: </b> Este parámetro es requerido en caso de ingresar una función, en su lugar, si se ingresa una tabla de datos, este parámetro es inferido y puede omitirse.
+						Si se proporciona una tabla de datos y además un valor de subintervalo, este será ignorado por el sistema.
+					</p>
+					<p><i><b>Importante para su consideración:</b></i><br>
+						Los método de Simpson 1/3 y 3/8 tienen restricciones en la cantidad de subintervalos necesarios para funcionar. Estas restricciones son importantes de considerar cuando ingresa
+						una tabla de datos ya que el método de Simpson 1/3 requiere que la cantidad de subintervalos sea par, mientras que Simpson 3/8 requiere una cantidad de subintervalos múltiplo de tres <br>
+						Si no se respetan estas restricciones recibirá un error y no se realizarán los cálculos hasta que ingrese parámetros válidos. 
+					</p>
+					<p> Para el método de Rosemberg se agrega un nuevo parámetro:</p>
+					<p> - <b>Nivel: </b> El método de Rosemberg también está basado en el método de diferencias divididas de Newton. Mientras mayor sea el nivel, se obtiene una mejor aproximación al valor real pero requiere mayor tiempo de procesamiento.<br>
+						<i>Es posible omitir este campo y el sistema usará por defecto 2 niveles de diferencia</i>
+					</p>
+					<p><i>Se elimina la posibilidad de ingresar los datos por medio de una tabla</i></p>
+				</div>
+			</div>
+			<!-- UNIDAD 5 -->
+			<div class="info-container">
+				<h3>Unidad 5 - Ecuaciones Diferenciales Ordinarias (EDO's)</h3>
+				<p>Las leyes fundamentales de la física: la mecánica, la electricidad y la termodinámica con frecuencia se basan en observaciones empíricas que explican las
+					variaciones de los sistemas. Más que en describir directamente el estado de los sistemas físicos, las leyes a menudo se expresan en términos de los cambios
+					del espacio y del tiempo. Cuando una función tiene una variable independiente, la ecuación se llama <i>ecuación diferencial ordinaria (o EDO).</i> Muchas de
+					las ecuaciones diferenciales de importancia práctica no se pueden resolver utilizando los métodos analíticos de cálculo. Así los métodos que se encuentran en
+					esta unidad resultan extremadamente importantes en todos los campos de la ingeniería.
+				</p>
+				<div style="margin-top: 1rem">
+					<h3>Método de Euler para solución de EDO's</h3>
+					<p>También conocido como <i>Euler-Cauchy</i> o de <i>punto pendiente</i>. Este método predice un nuevo valor de <i>y</i> usando la pendiente
+						(igual a la primera derivada en el valor original de <i>x</i>) para extrapolar linealmente sobre el tamaño de paso <i>h</i>. <br>Este método y los 
+						siguientes requieren de una condición inicial (<i>x<sub>i</sub></i> <i>y<sub>i</sub></i>)
+					</p>
+					<br>
+					<p><b>Parámetros requeridos para utilizar el método de Euler:</b></p>
+					<br>
+					<p><b>Ecuación: </b> La ecuación puede depender únicamente de x y <i>y</i></p>
+					<p><b><i>x<sub>i</sub></i>: </b> Valor inicial de x</p>
+					<p><b><i>y<sub>i</sub></i>: </b> Valor inicial de y</p>
+					<p><b>valor: </b> Valor de x para extrapolar</p>
+					<p><b>h: </b> Tamaño del paso. Este parámetro puede ser omitido si se proporciona una cantidad (n) de puntos</p>
+					<p><b>n: </b> Cantidad de puntos. Si ya se especificó un tamaño de paso, la cantidad de puntos será calculada automáticamente y puede omitirse.</p>
+				</div>
+				<div style="margin-top: 1rem">
+					<h3>EDO's con método de Taylor</h3>
+					<p>En el método de Taylor para resolver Ecuaciones Diferenciales Ordinarias (EDO), se aproxima el resultado a <b>n</b> términos de la serie
+						de Taylor, para lo cual se ajusta la expresión del problema a la derivada correspondiente.
+					</p>
+					<br>
+					<p><b>Parámetros requeridos para utilizar el método de Taylor:</b></p>
+					<br>
+					<p><b>Ecuación: </b> La ecuación puede depender únicamente de x y <i>y</i></p>
+					<p><b><i>x<sub>i</sub></i>: </b> Valor inicial de x</p>
+					<p><b><i>y<sub>i</sub></i>: </b> Valor inicial de y</p>
+					<p><b>valor: </b> Valor de x para extrapolar</p>
+					<p><b>h: </b> Tamaño del paso. Este parámetro puede ser omitido si se proporciona una cantidad (n) de puntos</p>
+					<p><b>n: </b> Cantidad de puntos. Si ya se especificó un tamaño de paso, la cantidad de puntos será calculada automáticamente y puede omitirse.</p>
+					<p><b>Grado: </b> Se refiere al término en la serie de Taylor al que se se quiere aproximar. Por defecto se utiliza hasta el segundo término.</p>
+					<p><b>Nota importante: </b> Si lo que busca es una aproximación para una EDO de tipo polinómica (Ej. y' = y - x^2 + x + 1), las derivadas posteriores
+						(necesarias para el término n de la serie de Taylor) son calculadas automáticamente por el sistema. En cambio, si la EDO es de tipo trigonométrica
+						(Ej. y' = cos(x + y)) o da cabida a una ecuación diferencial del producto de dos variables (Ej. y' = 2*x*y), dejar al sistema calcularlas automáticamente
+						puede dar lugar a resultados erróneos. En su lugar, recomendamos encarecidamente al usuario que si la función pertenece a las mencionadas anteriormente, se deben proporcionar
+						manualmente las derivadas respectivas seleccionando la casilla "Ingresar EDO's manualmente". Esto asegura una respuesta correcta a la hora de aproximar resultados. 
+					</p>
+				</div>
+				<div style="margin-top: 1rem">
+					<h3>Método de Runge Kutta</h3>
+					<p>Los método de Runge Kutta logran una exactitud del prcedimiento de la serie de Taylor sin requerir el cálculo de las derivadas superirores. Los métodos de Runge Kutta
+						de cualquier orden se deducen mediante el desarrollo de la serie de Taylor de la función <i>f(x, y)</i>.
+					</p>
+					<br>
+					<p><b>Parámetros requeridos para utilizar el método de Runge Kutta:</b></p>
+					<br>
+					<p><b>Ecuación: </b> La ecuación puede depender únicamente de x y <i>y</i></p>
+					<p><b><i>x<sub>i</sub></i>: </b> Valor inicial de x</p>
+					<p><b><i>y<sub>i</sub></i>: </b> Valor inicial de y</p>
+					<p><b>valor: </b> Valor de x para extrapolar</p>
+					<p><b>h: </b> Tamaño del paso. Este parámetro puede ser omitido si se proporciona una cantidad (n) de puntos</p>
+					<p><b>n: </b> Cantidad de puntos. Si ya se especificó un tamaño de paso, la cantidad de puntos será calculada automáticamente y puede omitirse.</p>
+					<p><b>Grado: </b> Entre 2 y 4. Se refiere al término n en la serie de Taylor</p>
+				</div>
+			</div>
+			<div class="info-container">
+				<h3>Listado de funciones</h3>
+				<h4>&nbsp;&nbsp;Funciones Trigonométricas:</h4>
+				<ul>
+					<li>&nbsp;&nbsp;sin(x) - Función seno</li>
+					<li>&nbsp;&nbsp;cos(x) - Función coseno</li>
+					<li>&nbsp;&nbsp;tan(x) - Función tangente</li>
+					<li>&nbsp;&nbsp;asin(x) - Función arcoseno</li>
+					<li>&nbsp;&nbsp;acos(x) - Función arcocoseno</li>
+					<li>&nbsp;&nbsp;atan(x) - Función arcotangente</li>
+					<li>&nbsp;&nbsp;csc(x) - Función cosecante</li>
+					<li>&nbsp;&nbsp;sec(x) - Función secante</li>
+					<li>&nbsp;&nbsp;cot(x) - Función cotangente</li>
+				</ul>
+				<h4>&nbsp;&nbsp;Logaritmos:</h4>
+				<ul>
+					<li>&nbsp;&nbsp;ln(x) - Logaritmo natural o logaritmo base <i>e</i></li>
+					<li>&nbsp;&nbsp;log(x,b) - logaritmo base b de x</li>
+				</ul>
+				<h4>&nbsp;&nbsp;Potencias y Constantes:</h4>
+				<ul>
+					<li>&nbsp;&nbsp;pi - Valor de la constante π (pi)</li>
+					<li>&nbsp;&nbsp;exp(x) - Función exponencial <i>e<sup> x</sup></i></li>
+					<li>&nbsp;&nbsp;^ - Simbolo de potencia. x^2 = <i>x<sup> 2</sup></i></li>
+					<li>&nbsp;&nbsp;sqrt(x) - Raíz cuadrada</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+<script src="/info.4494c620.js"></script></body>
+</html>
